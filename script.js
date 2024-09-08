@@ -5,6 +5,14 @@ const swiper = new Swiper(".swiper", {
   slidesPerView: 2,
   spaceBetween: 1,
 
+  breakpoints: {
+    // when window width is >= 320px
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    }
+  },
+
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
