@@ -1,0 +1,12 @@
+.floor .swiper-button-prev::after,
+.floor .swiper-button-next::after {
+  content: none;
+}
+
+.floor .swiper-arrows {
+    position: absolute;
+    bottom: 20px;
+    right: 5.5%;
+    z-index: 9;
+    width: 100px;
+}
