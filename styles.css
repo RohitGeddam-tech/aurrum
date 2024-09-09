@@ -1,3 +1,36 @@
+.banner-navigation .swiper-button-prev::after,
+.banner-navigation .swiper-button-next::after {
+  content: none;
+}
+ .banner-navigation .swiper-arrows {
+  height: 50px;
+  
+  position: absolute;
+  bottom: 20px;
+  right: 5.5%;
+  z-index: 9;
+  width: 100px;
+}
+
+/* location */
+.location-points .image-wrapper{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px;
+  height: 100px;
+  width: 100px;
+}
+/* gallery */
+.gallery .swiper-button-prev::after,
+.gallery .swiper-button-next::after{
+  content: none;
+}
+.gallery-arrows{
+  display: flex;
+  gap: 14px;
+}
 .floor .swiper-button-prev::after,
 .floor .swiper-button-next::after {
   content: none;
@@ -10,3 +43,7 @@
     z-index: 9;
     width: 100px;
 }
+
+
+
+
