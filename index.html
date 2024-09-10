@@ -15,15 +15,28 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <style>
-      * {
-        --gold: #c1a06b;
-        --white: #fff;
-        --gray: #434542;
-        --form-backdrop: #000302;
-        --beige: #f9f7f0;
-      }
-    </style>
+    <!-- ?jquery -->
+    <link rel="stylesheet" href="css/slick.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Add Slick CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
+    />
+
+    <!-- Add Slick JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"
+    ></script>
   </head>
 
   <body>
@@ -101,86 +114,78 @@
       <section id="banner" class="banner">
         <div class="container-fluid p-0">
           <div class="banner-section position-relative text-center text-white">
-            <div class="swiper banner-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img
-                    src="assets/assets/main banner/banner.png"
-                    class="img-fluid w-100"
-                    alt="Banner Image"
-                    style="object-fit: cover; height: 100vh"
-                  />
-                  <div
-                    class="banner-text position-absolute top-50 start-50 translate-middle"
+            <div class="banner-swiper">
+              <div class="swiper-slide">
+                <img
+                  src="assets/assets/main banner/banner.png"
+                  class="img-fluid w-100"
+                  alt="Banner Image"
+                  style="object-fit: cover; height: 100vh"
+                />
+                <div
+                  class="banner-text position-absolute top-50 start-50 translate-middle "
+                >
+                  <h1
+                    class="fw-bold"
+                    style="color: var(--gold);"
                   >
-                    <h1
-                      class="fw-bold"
-                      style="color: var(--gold); font-size: 2rem"
-                    >
-                      Experience the
-                    </h1>
-                    <h1
-                      class="fw-bold"
-                      style="color: var(--gold); font-size: 4rem"
-                    >
-                      Extraordinary
-                    </h1>
-                  </div>
+                    Experience the
+                  </h1>
+                  <h1
+                    class="fw-bold"
+                    style="color: var(--gold); "
+                  >
+                    Extraordinary
+                  </h1>
                 </div>
+              </div>
 
-                <div class="swiper-slide">
-                  <img
-                    src="assets/assets/location/bg colour.png"
-                    class="img-fluid w-100"
-                    alt="Banner Image 2"
-                    style="object-fit: cover; height: 100vh"
-                  />
-                  <div
-                    class="banner-text position-absolute top-50 start-50 translate-middle"
+              <div class="swiper-slide">
+                <img
+                  src="assets/assets/location/bg colour.png"
+                  class="img-fluid w-100"
+                  alt="Banner Image 2"
+                  style="object-fit: cover; height: 100vh"
+                />
+                <div
+                  class="banner-text position-absolute top-50 start-50 translate-middle"
+                >
+                  <h1
+                    class="fw-bold"
+                    style="color: var(--gold); font-size: 2rem"
                   >
-                    <h1
-                      class="fw-bold"
-                      style="color: var(--gold); font-size: 2rem"
-                    >
-                      Discover the
-                    </h1>
-                    <h1
-                      class="fw-bold"
-                      style="color: var(--gold); font-size: 4rem"
-                    >
-                      Marvel
-                    </h1>
-                  </div>
+                    Discover the
+                  </h1>
+                  <h1
+                    class="fw-bold"
+                    style="color: var(--gold); font-size: 4rem"
+                  >
+                    Marvel
+                  </h1>
                 </div>
               </div>
               <!-- Swiper Navigation -->
-              <div
-                class="banner-navigation position-absolute display-flex"
-                style="
-                  top: 87%;
-                  right: 10%;
-                  z-index: 15;
-                  transform: translateY(-50%);
-                "
-              >
-                <div class="swiper-button-next">
-                  <img
-                    src="assets/assets/main banner/arrow left.png"
-                    alt="next"
-                    style="cursor: pointer"
-                  />
-                </div>
-                <div class="swiper-button-prev">
-                  <img
-                    src="assets/assets/main banner/arrow right.png"
-                    alt="Prev"
-                    style="cursor: pointer"
-                  />
-                </div>
-              </div>
+
               <!-- navigation ends -->
             </div>
-
+            <div
+            class="banner-navigation"
+          >
+            <div class="banner-button-next">
+              <img
+                src="assets/assets/main banner/arrow left.png"
+                alt="next"
+                style="cursor: pointer"
+              />
+            </div>
+            <div class="banner-button-prev">
+              <img
+                src="assets/assets/main banner/arrow right.png"
+                alt="Prev"
+                style="cursor: pointer"
+              />
+            </div>
+          </div>
             <!-- Form Section -->
             <div
               class="position-absolute d-lg-flex justify-content-center align-items-center bottom-0 start-50 translate-middle-x w-100"
@@ -229,7 +234,7 @@
                   "
                 />
                 <button
-                  class="btn rounded-0 "
+                  class="btn rounded-0"
                   style="
                     background-color: var(--gold);
                     padding: 10px 46px;
@@ -245,11 +250,11 @@
       </section>
 
       <!-- Overview -->
-
       <section id="overview" class="overview py-3">
         <div class="container py-5">
           <div class="row align-items-center">
-            <div class="col-md-6 pe-4">
+            <!-- Text and details section -->
+            <div class="col-md-6 pe-3 pe-md-4 text-center text-md-start">
               <h2 class="fw-bold" style="color: var(--gold); font-size: 4rem">
                 Overview
               </h2>
@@ -258,43 +263,95 @@
               </h5>
               <p class="pt-2">
                 Gurugram beating heart, the New Golf Course Road Extension, has
-                blossomed into a thriving hub. <br />
-                This growing community offers a vibrant mix of attractions &
-                amenities creating a harmonius balance between urban energy &
-                neighborly charm. Discover a place where friendly neighborhoods
-                seamlessly connect with the city's pulse, offering a lifestyle
-                as diverse as it is dynamic.
+                blossomed into a thriving hub. This growing community offers a
+                vibrant mix of attractions & amenities creating a harmonius
+                balance between urban energy & neighborly charm. Discover a
+                place where friendly neighborhoods seamlessly connect with the
+                city's pulse, offering a lifestyle as diverse as it is dynamic.
               </p>
-              <ul class="pb-3 mb-0 pt-1 ps-1">
-                <li class="mb-3" style="list-style: none">
+
+              <!-- This image will be visible only on mobile devices (below 768px) -->
+              <div class="d-md-none text-center mb-4 mt-4 position-relative">
+                <img
+                  src="/assets/mobile assests/overview/image.png"
+                  alt="overview-img"
+                  class="img-fluid"
+                  style="
+                    z-index: 9;
+                    position: relative;
+                    width: 80%;
+                    margin: 0 auto;
+                    transform: translateY(0px);
+                  "
+                />
+                <img
+                  src="/assets/mobile assests/overview/second rectangle below image.png"
+                  alt="grey-img"
+                  class="img-fluid"
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(15px);
+                    width: 100vw; /* Full width of the viewport */
+                    height: 50%;
+                    z-index: 1; /* Ensure it's behind the first image */
+                  "
+                />
+              </div>
+
+              <!-- List of features -->
+              <ul class="pb-3 mb-0 pt-1 ps-1 text-center text-md-start">
+                <li
+                  class="mb-3 d-flex flex-column flex-md-row align-items-center"
+                  style="list-style: none"
+                >
                   <img
                     src="/assets/assets/overview/water retention icon.png"
                     alt="icon"
-                    class="mx-2"
-                  />Water Retention System
+                    class="mx-auto mx-md-0 mb-2 mb-md-0"
+                  />
+                  <span class="ms-md-2">Water Retention System</span>
                 </li>
-                <li class="mb-3" style="list-style: none">
+                <li
+                  class="mb-3 d-flex flex-column flex-md-row align-items-center"
+                  style="list-style: none"
+                >
                   <img
                     src="/assets/assets/overview/prime sports icon.png"
                     alt="icon"
-                    class="me-2"
-                  />Prime Sports Facilities At Doorstep
+                    class="mx-auto mx-md-0 mb-2 mb-md-0"
+                  />
+                  <span class="ms-md-2"
+                    >Prime Sports Facilities At Doorstep</span
+                  >
                 </li>
-                <li class="mb-3" style="list-style: none">
+                <li
+                  class="mb-3 d-flex flex-column flex-md-row align-items-center"
+                  style="list-style: none"
+                >
                   <img
                     src="/assets/assets/overview/neighbourhood icon.png"
                     alt="icon"
-                    class="me-2"
-                  />Neighbourhood Of Boutique Golf Courses
+                    class="mx-auto mx-md-0 mb-2 mb-md-0"
+                  />
+                  <span class="ms-md-2"
+                    >Neighbourhood Of Boutique Golf Courses</span
+                  >
                 </li>
-                <li class="mb-3" style="list-style: none">
+                <li
+                  class="mb-3 d-flex flex-column flex-md-row align-items-center"
+                  style="list-style: none"
+                >
                   <img
                     src="/assets/assets/overview/aravali hills logo.png"
                     alt="icon"
-                    class="me-2"
-                  />Close Proximity To Aravalli Hills
+                    class="mx-auto mx-md-0 mb-2 mb-md-0"
+                  />
+                  <span class="ms-md-2">Close Proximity To Aravalli Hills</span>
                 </li>
               </ul>
+
               <button
                 class="btn btn-primary px-5 shadow-none rounded-0"
                 style="background-color: var(--gold); border: none"
@@ -302,10 +359,13 @@
                 Know More
               </button>
             </div>
-            <div class="col-md-6 ps-5 pb-5 position-relative">
+
+            <!-- Image section, visible only on larger screens (above 768px) -->
+            <div class="col-md-6 d-none d-md-block ps-5 pb-5 position-relative">
               <img
                 src="/assets/assets/overview/overview image.png"
                 alt="overview-img"
+                class="img-fluid"
                 style="
                   z-index: 9;
                   position: relative;
@@ -315,6 +375,7 @@
               />
               <img
                 src="/assets/assets/overview/overview below rectangle.png"
+                class="img-fluid"
                 alt="grey-img"
                 style="position: absolute; bottom: 0; left: 0"
               />
@@ -325,13 +386,169 @@
 
       <!-- Amenities -->
 
-      <section class="amenities" id="amenities"></section>
+      <section class="amenities" id="amenities">
+        <div class="amenities-wrapper">
+          <div
+            class="amenities-head"
+            style="
+              background-image: url(assets/assets/amenities/first\ box.png);
+            "
+          >
+            <h2 style="font-size: 3.5rem; font-weight: 400">Amenities</h2>
+          </div>
+          <div class="expanding-cards">
+            <div
+              class="amenities-img-card position-relative text-center"
+              style="background-image: url('assets/assets/amenities/club.jpg')"
+            >
+              <div class="overlay-content h-100">
+                <div class="expanding-card-head">
+                  <h3>Clubhouse</h3>
+                  <img
+                    src="assets/assets/amenities/basketball court line_.png"
+                    alt=""
+                  />
+                </div>
+                <p>
+                  Chill at the coffee lounge or relax at the spa or maybe you
+                  want to win a game and feel like the king of the world, it’s
+                  all here
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="amenities-img-card position-relative text-center"
+              style="
+                background-image: url('assets/assets/amenities/swimming.jpg');
+              "
+            >
+              <div class="overlay-content h-100">
+                <div class="expanding-card-head">
+                  <h3>Swimming Pool</h3>
+                  <img
+                    src="assets/assets/amenities/basketball court line_.png"
+                    alt=""
+                  />
+                </div>
+
+                <p>
+                  Dive into luxury, and immerse in serenity as the pool becomes
+                  an oasis of extraordinary relaxation.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="amenities-img-card position-relative text-center"
+              style="background-image: url('assets/assets/amenities/gym.jpg')"
+            >
+              <div class="overlay-content h-100">
+                <div class="expanding-card-head">
+                  <h3>Gymnasium</h3>
+                  <img
+                    src="assets/assets/amenities/basketball court line_.png"
+                    alt=""
+                  />
+                </div>
+
+                <p>
+                  Elevate fitness and transform life as the gym becomes the path
+                  to extraordinary wellness.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="amenities-img-card position-relative text-center"
+              style="background-image: url('assets/assets/amenities/spa.jpg')"
+            >
+              <div class="overlay-content h-100">
+                <div class="expanding-card-head">
+                  <h3>Spa</h3>
+                  <img
+                    src="assets/assets/amenities/basketball court line_.png"
+                    alt=""
+                  />
+                </div>
+                <p class="text-muted small">
+                  Indulge in bliss, rejuvenate the soul as the spa becomes an
+                  escape to pure tranquillity.
+                </p>
+              </div>
+            </div>
+            <div
+              class="amenities-img-card position-relative text-center"
+              style="
+                background-image: url('assets/assets/amenities/multi-cuine-restaurant.jpg');
+              "
+            >
+              <div class="overlay-content h-100">
+                <div class="expanding-card-head">
+                  <h3>Multi-cuisine Restaurant</h3>
+                  <img
+                    src="assets/assets/amenities/basketball court line_.png"
+                    alt=""
+                  />
+                </div>
+                <p class="text-muted small">
+                  Indulge in flavours from around the world at this
+                  multi-cuisine restaurant. Where every meal is a journey, and
+                  every bite a celebration.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="amenities-img-card position-relative text-center"
+              style="background-image: url('assets/assets/amenities/kids.jpg')"
+            >
+              <div class="overlay-content h-100">
+                <div class="expanding-card-head">
+                  <h3>Kids play area</h3>
+                  <img
+                    src="assets/assets/amenities/basketball court line_.png"
+                    alt=""
+                  />
+                </div>
+                <p class="text-muted small">
+                  A well designated play area for sports and recreation and
+                  ample avenues for fun. This place is heaven for your child.
+                </p>
+              </div>
+            </div>
+            <!-- <div class="amenities-img-card position-relative text-center" style="background-image: url('assets/assets/amenities/');">
+            <div class="overlay-content d-flex flex-column justify-content-center align-items-center h-100">
+              <h3 class="text-gold">Spiritual Zone</h3>
+              <p class="text-muted small">Discover serene spiritual zones for contemplation, meditation areas embraced by nature & heartwarming interaction spots.</p>
+            </div>
+          </div> -->
+          </div>
+        </div>
+        <div class="expand-card-navigation">
+          <span> </span>
+          <div class="button">
+            <div class="expand-card-button-next">
+              <img
+                src="/assets/assets/floor plan/arrow right.png"
+                alt="right-arrow"
+              />
+            </div>
+            <div class="expand-card-button-prev">
+              <img
+                src="/assets/assets/floor plan/arrow left.png"
+                alt="left-arrow"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- location -->
 
       <section
         id="location"
-        class="location-section py-5"
+        class="location-section py-3 pb-0 py-md-5"
         style="background-color: var(--beige)"
       >
         <div class="container text-center">
@@ -358,11 +575,11 @@
 
           <div class="container">
             <div
-              class="row justify-content-center align-items-start position-relative"
+              class="location-points-row row justify-content-around align-items-start position-relative"
               style="z-index: 5"
             >
               <div
-                class="col-md-3 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
+                class="col-md-6 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
               >
                 <div
                   class="image-wrapper rounded-circle shadow-sm bg-white mb-3"
@@ -386,7 +603,7 @@
               </div>
 
               <div
-                class="col-md-3 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
+                class="col-md-6 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
               >
                 <div
                   class="image-wrapper rounded-circle shadow-sm bg-white mb-3"
@@ -407,7 +624,7 @@
               </div>
 
               <div
-                class="col-md-3 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
+                class="col-md-6 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
               >
                 <div
                   class="image-wrapper rounded-circle shadow-sm bg-white mb-3"
@@ -428,7 +645,7 @@
               </div>
 
               <div
-                class="col-md-3 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
+                class="col-md-6 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
               >
                 <div
                   class="image-wrapper rounded-circle shadow-sm bg-white mb-3"
@@ -475,47 +692,134 @@
             promising hours of convenient amusement.
           </p>
         </div>
-        <div class="gallery-swiper-wrapper container position-relative">
-          <div class="gallery-swiper swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-             <div class="gallery-card">
-              <img src="assets/assets/gallery/triple height lobby image.png" alt="" />
+        <div class="gallery-swiper-wrapper container position-relative mt-5">
+          <div class="gallery-swiper">
+            <div class="swiper-slide">
+              <div class="gallery-card text-center">
+                <img
+                  src="assets/assets/gallery/expendable gallery/entrance.jpg"
+                  alt="Grand Entrance"
+                  class="img-fluid"
+                />
+                <h3 class="text-gold mt-3">Grand Entrance</h3>
+                <p class="text-muted small">
+                  Your arrival begins with a discreet, dedicated driveway,
+                  leading you directly to your haven.
+                </p>
               </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gallery-card text-center">
+                <img
+                  src="assets/assets/gallery/expendable gallery/lobby.jpg"
+                  alt="Triple Height Lobby"
+                  class="img-fluid"
+                />
+                <h3 class="text-gold mt-3">Triple Height Lobby</h3>
+                <p class="text-muted small">
+                  From the moment you step inside, you're enveloped in an
+                  atmosphere of refined opulence and timeless beauty.
+                </p>
               </div>
-              <div class="swiper-slide">
-                <div class="gallery-card">
-                  <img src="assets/assets/gallery/grand entracnce image.png" alt="" />
-                </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gallery-card text-center">
+                <img
+                  src="assets/assets/gallery/expendable gallery/balcony.jpg"
+                  alt="Balcony"
+                  class="img-fluid"
+                />
+                <h3 class="text-gold mt-3">Balcony</h3>
+                <p class="text-muted small">
+                  Embrace sun-kissed mornings in your expansive living spaces.
+                </p>
               </div>
-              <div class="swiper-slide">
-               <div class="gallery-card">
-                <img src="assets/assets/gallery/balcony image.png" alt="" />
-               </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gallery-card text-center">
+                <img
+                  src="assets/assets/gallery/expendable gallery/Living-Room.jpg"
+                  alt="Living Room"
+                  class="img-fluid"
+                />
+                <h3 class="text-gold mt-3">Living Room</h3>
+                <p class="text-muted small">
+                  Every detail, from the curated artwork to the polished
+                  finishes, whispers of sophisticated elegance.
+                </p>
               </div>
-              <div class="swiper-slide">
-               <div class="gallery-card">
-                <img src="assets/assets/gallery/triple height lobby image.png" alt="" />
-               </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gallery-card text-center">
+                <img
+                  src="assets/assets/gallery/expendable gallery/bedroom.jpg"
+                  alt="Bedroom"
+                  class="img-fluid"
+                />
+                <h3 class="text-gold mt-3">Bedroom</h3>
+                <p class="text-muted small">
+                  The well organized expansive rooms provide ample space for
+                  families, couples, or anyone who craves a private retreat
+                  within the city's embrace.
+                </p>
               </div>
-              <div class="swiper-slide">
-               <div class="gallery-card"> <img src="assets/assets/gallery/grand entracnce image.png" alt="" />
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gallery-card text-center">
+                <img
+                  src="assets/assets/gallery/expendable gallery/kitchen.jpg"
+                  alt="Kitchen"
+                  class="img-fluid"
+                />
+                <h3 class="text-gold mt-3">Kitchen</h3>
+                <p class="text-muted small">
+                  Kitchens are outfitted with premium fixtures and fittings to
+                  dish up a touch of sophistication.
+                </p>
               </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="gallery-card text-center">
+                <img
+                  src="assets/assets/gallery/expendable gallery/bathroom.jpg"
+                  alt="Bathroom"
+                  class="img-fluid"
+                />
+                <h3 class="text-gold mt-3">Bathroom</h3>
+                <p class="text-muted small">
+                  Every element, from the high-tech fixtures to the bespoke
+                  amenities, is designed to pamper you, indulge you, and leave
+                  you feeling renewed and revitalized.
+                </p>
               </div>
             </div>
           </div>
-        
+
           <!-- navigation -->
-          <div class="gallery-arrows position-absolute" style="top: 103%; right: 10%;">
+          <div
+            class="gallery-arrows position-absolute"
+            style="top: 103%; right: 10%"
+          >
             <div class="gallery-swiper-button-next">
-              <img src="assets/assets/gallery/arrow right.png" alt="right-arrow" />
+              <img
+                src="assets/assets/gallery/arrow left.png"
+                alt="right-arrow"
+              />
             </div>
             <div class="gallery-swiper-button-prev">
-              <img src="assets/assets/gallery/arrow left.png" alt="left-arrow" />
+              <img
+                src="assets/assets/gallery/arrow right.png"
+                alt="left-arrow"
+              />
             </div>
           </div>
         </div>
-        
       </section>
       <!-- gallery ends -->
       <!-- Floor Plan -->
@@ -580,69 +884,208 @@
             </div>
           </div>
         </div>
+        <img
+          src="assets/mobile assests/floor plan/tree vector.png"
+          class="mb-4 img-fluid d-md-none d-flex"
+          alt=""
+        />
+        <button
+          class="btn btn-primary px-5 py-2 shadow-none rounded-0"
+          style="
+            background-color: var(--gold);
+            border: none;
+            display: flex;
+            margin: 0 auto;
+          "
+        >
+          Download Brochure
+        </button>
       </section>
       <!-- get in touch  -->
-      <section class="get-in-touch py-5">
-        <div class="img-below-get-in-touch d-flex justify-content-between" >
-     </div> <img src="assets/assets/get in touch/below map.png" alt="" style="transform: rotate(180deg);">     <div class="span"></div>
+      <section class="get-in-touch py-md-5 py-3">
+        <div class="img-below-get-in-touch d-flex justify-content-between">
+          <img
+            src="assets/assets/get in touch/below map.png"
+            alt=""
+            style="transform: rotateX(1deg) rotateY(-180deg)"
+            class="img-fluid d-none d-md-flex"
+          />
+          <div class="span"></div>
         </div>
-        <div class="container">
-          <div class="row align-items-center">
-            
-            <!-- Left Side: Form Section -->
-            <div class="col-lg-6  mb-lg-0 ">
-              <div class="d-flex justify-content-around">
-                
-       
-                <div class="form" style="width: 70%;">
-                  <h2 class="mb-4 fw-bold">GET IN TOUCH</h2>
-                  <form>
-                    <div class="mb-3">
-                      <label for="name" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                    </div>
-                    <div class="mb-3">
-                      <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                    </div>
-                    <div class="mb-3">
-                      <label for="phone" class="form-label">Phone</label>
-                      <input type="text" class="form-control" id="phone" placeholder="Enter your phone number">
-                    </div>
-                    <div class="mb-3">
-                      <label for="message" class="form-label">Message</label>
-                      <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary px-5 py-2" style="background-color: var(--gold); border: none;">Schedule Site Visit</button>
-                  </form>
+
+        <div class="d-flex get-in-touch-wrapper">
+          <div class="d-flex justify-content-around w-100">
+            <div class="empty-area d-none" style="width: 20%"></div>
+            <div class="get-in-touch-form">
+              <h2 class="mb-4 fw-bold">GET IN TOUCH</h2>
+              <form class="w-100">
+                <div class="mb-5">
+                  <input
+                    type="text"
+                    class="custom-input"
+                    id="name"
+                    placeholder="Name"
+                  />
                 </div>
-                
-              </div>
+                <div class="mb-5">
+                  <input
+                    type="email"
+                    class="custom-input"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="mb-5">
+                  <input
+                    type="text"
+                    class="custom-input"
+                    id="phone"
+                    placeholder="Phone"
+                  />
+                </div>
+                <div class="mb-5">
+                  <textarea
+                    class="custom-input"
+                    id="message"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary px-5 py-2 rounded-0"
+                  style="background-color: var(--gold); border: none"
+                >
+                  Schedule Site Visit
+                </button>
+              </form>
             </div>
-            
-            <!-- Right Side: Map Image Section -->
-            <div class="col-lg-6">
-              <div class="map-location text-center h-100">
-                <img src="assets/assets/get in touch/get in touch map image.png" alt="Map Location" class="img-fluid w-100 h-100" style="object-fit: cover;">
-              </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="map-location text-center h-100">
+              <img
+                src="assets/assets/get in touch/get in touch map image.png"
+                alt="Map Location"
+                class="img-fluid w-100 h-100"
+                style="object-fit: cover"
+              />
             </div>
-            
           </div>
         </div>
-        <div class="img-below-get-in-touch d-flex justify-content-between" >
-          <div class="span"></div> <img src="assets/assets/get in touch/below map.png" alt="">
-        </div>
       </section>
-      
-      
+
+      <footer>
+        <div class="art-wrap">
+          <div class="img-below-get-in-touch d-flex justify-content-between">
+            <div class="span"></div>
+            <img
+              src="assets/assets/get in touch/below map.png"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <img
+            src="assets/assets/get in touch/line below map.png"
+            alt=""
+            class="img-fluid line-on-art"
+          />
+          <div
+            class="footer-content container d-flex flex-column flex-md-row justify-content-md-between align-items-md-start text-center text-md-start"
+          >
+            <div class="left-content mb-3 mb-md-0">
+              <p class="text-bold" style="font-size: 12px; margin-bottom: 8px">
+                HAREA No.:RC/REP/HAREA/GGM/849/581/2024/76 Dated: 15.07.2024
+              </p>
+              <p class="text-bold" style="font-size: 12px">
+                WWW.HARYANAAREA.GOV.IN
+              </p>
+            </div>
+            <div class="right-content">
+              <p class="text-bold" style="font-size: 12px">
+                Design by Dotwise Pt. Ltd.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
 
+    <script>
+      // hero banner
+      $(".banner-swiper").slick({
+        slidesToShow: 1,
+        prevArrow: $(".banner-button-next"), // Custom previous button
+        nextArrow: $(".banner-button-prev"), // Custom next button
+      });
+
+      // gallery
+      $(".gallery-swiper").slick({
+        centerMode: true,
+        centerPadding: "0px",
+        slidesToShow: 3,
+        prevArrow: $(".gallery-swiper-button-next"),
+        nextArrow: $(".gallery-swiper-button-prev"),
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "10px",
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "10px",
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+
+      // location-points-row
+      $(".location-points-row").slick({
+        slidesToShow: 5,
+        // prevArrow: $('.slick-button-prev'),
+        // nextArrow: $('.slick-button-next'),
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "5px",
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: "0px",
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- jquery -->
+    <!-- <script defer src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
