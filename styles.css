@@ -116,6 +116,15 @@
   height: 100px;
   width: 100px;
 }
+
+.location-navigation{
+  z-index: 10;
+  position: absolute;
+  right: 0%;
+  display: flex;
+  justify-content: center; 
+  gap: 14px;
+} 
 /* amenities */
 
 .amenities-wrapper{
@@ -230,26 +239,34 @@ p {
 .gallery-card {
   position: relative;
   perspective: 1500px;
+   
+}
 
+.gallery-card img{
+  padding: 36px;
+  object-fit: contain;
+  transition: padding 0.5s ease-in,box-shadow 0.5s ease-in;
 }
 .gallery-card:hover img{
-   padding: 0 0 16px 0;
-}
-.gallery-card img{
-  padding: 16px;
-  object-fit: contain;
-  transition: padding 0.5s ease-in;
+  padding: 0px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
 .gallery-card p{
   width: 80%;
   margin: 0 auto;
 }
-.gallery-swiper .swiper-slide-active .gallery-card img{
-/*   
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px; */
-
+.gallery-swiper{
+  overflow: hidden !important;
 }
-
+.gallery-swiper .slick-list{
+       overflow: visible !important;
+}
+@media(max-width:768px){
+  .gallery-card:hover img{
+    padding: 16px;
+    box-shadow: none;
+ }
+}
 
 /* floor plan */
 .floor .swiper-button-prev::after,
@@ -263,6 +280,8 @@ p {
     right: 5.5%;
     z-index: 9;
     width: 100px;
+    display: flex;
+    gap: 16px;
 }
 
 
@@ -290,7 +309,7 @@ p {
 }
 
 .custom-shadow{
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
 
 .get-in-touch-wrapper{

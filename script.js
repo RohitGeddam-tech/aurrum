@@ -1,25 +1,25 @@
 
 
-const swiper = new Swiper(".swiper", {
-  direction: "horizontal",
-  loop: true,
-  slidesPerView: 2,
-  spaceBetween: 1,
-  breakpoints: {
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 0,
-    },
-    1024: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-    },
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+// const swiper = new Swiper(".swiper", {
+//   direction: "horizontal",
+//   loop: true,
+//   slidesPerView: 2,
+//   spaceBetween: 1,
+//   breakpoints: {
+//     640: {
+//       slidesPerView: 1,
+//       spaceBetween: 0,
+//     },
+//     1024: {
+//       slidesPerView: 2,
+//       spaceBetween: 30,
+//     },
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
 
 // const swiperBanner = new Swiper(".banner-swiper", {
 //   loop: true,
