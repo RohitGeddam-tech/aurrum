@@ -41,9 +41,9 @@
 
   <body>
     <!-- Navbar -->
-<div class="enquire-now">
- <a href="tel:+18005721000">Enquire Now</a>
-</div>
+    <div class="enquire-now">
+      <a href="tel:+18005721000">Enquire Now</a>
+    </div>
     <nav
       class="navbar pt-2 pb-2 navbar-expand-lg fixed-top"
       style="background-color: var(--white)"
@@ -125,18 +125,12 @@
                   style="object-fit: cover; height: 100vh"
                 />
                 <div
-                  class="banner-text position-absolute top-50 start-50 translate-middle "
+                  class="banner-text position-absolute top-50 start-50 translate-middle"
                 >
-                  <h1
-                    class="fw-bold"
-                    style="color: var(--gold);"
-                  >
+                  <h1 class="" style="color: var(--gold)">
                     Experience the
                   </h1>
-                  <h1
-                    class="fw-bold"
-                    style="color: var(--gold); "
-                  >
+                  <h1 class="" style="color: var(--gold)">
                     Extraordinary
                   </h1>
                 </div>
@@ -153,14 +147,14 @@
                   class="banner-text position-absolute top-50 start-50 translate-middle"
                 >
                   <h1
-                    class="fw-bold"
-                    style="color: var(--gold); font-size: 2rem"
+                    class=""
+                    style="color: var(--gold); "
                   >
                     Discover the
                   </h1>
                   <h1
-                    class="fw-bold"
-                    style="color: var(--gold); font-size: 4rem"
+                    class=""
+                    style="color: var(--gold); "
                   >
                     Marvel
                   </h1>
@@ -170,30 +164,28 @@
 
               <!-- navigation ends -->
             </div>
-            <div
-            class="banner-navigation"
-          >
-            <div class="banner-button-next">
-              <img
-                src="assets/assets/main banner/arrow left.png"
-                alt="next"
-                style="cursor: pointer"
-              />
+            <div class="banner-navigation">
+              <div class="banner-button-next">
+                <img
+                  src="assets/assets/main banner/arrow left.png"
+                  alt="next"
+                  style="cursor: pointer"
+                />
+              </div>
+              <div class="banner-button-prev">
+                <img
+                  src="assets/assets/main banner/arrow right.png"
+                  alt="Prev"
+                  style="cursor: pointer"
+                />
+              </div>
             </div>
-            <div class="banner-button-prev">
-              <img
-                src="assets/assets/main banner/arrow right.png"
-                alt="Prev"
-                style="cursor: pointer"
-              />
-            </div>
-          </div>
             <!-- Form Section -->
             <div
-              class="position-absolute d-lg-flex justify-content-center align-items-center bottom-0 start-50 translate-middle-x w-100"
+              class="position-absolute d-none d-lg-flex justify-content-center align-items-center bottom-0 start-50 translate-middle-x w-100"
               style="background-color: rgba(0, 3, 2, 0.4); z-index: 999"
             >
-              <h2 class="text-white me-4 mb-0" style="font-size: 1.5rem">
+              <h2 class="text-white me-4 mb-0" s>
                 Enquire Now
               </h2>
               <form
@@ -253,19 +245,19 @@
 
       <!-- Overview -->
       <section id="overview" class="overview py-3">
-        <div class="container py-5">
+        <div class="container py-1 py-md-5">
           <div class="row align-items-center">
             <!-- Text and details section -->
             <div class="col-md-6 pe-3 pe-md-4 text-center text-md-start">
-              <h2 class="fw-bold" style="color: var(--gold); font-size: 4rem">
+              <h2 class="" style="color: var(--gold);">
                 Overview
               </h2>
-              <h5 class="fw-bold" style="font-size: 2rem">
+              <h3 class=" mb-0 mb-md-1" >
                 Experience the Extraordinary
-              </h5>
-              <p class="pt-2">
+              </h3>
+              <p class="pt-2 px-2 px-md-0">
                 Gurugram beating heart, the New Golf Course Road Extension, has
-                blossomed into a thriving hub. This growing community offers a
+                blossomed into a thriving hub. <br class="d-none d-md-block">  This growing community offers a
                 vibrant mix of attractions & amenities creating a harmonius
                 balance between urban energy & neighborly charm. Discover a
                 place where friendly neighborhoods seamlessly connect with the
@@ -295,17 +287,17 @@
                     bottom: 0;
                     left: 50%;
                     transform: translateX(-50%) translateY(15px);
-                    width: 100vw; /* Full width of the viewport */
+                    width: 88%;
                     height: 50%;
-                    z-index: 1; /* Ensure it's behind the first image */
+                    z-index: 1;
                   "
                 />
               </div>
 
               <!-- List of features -->
-              <ul class="pb-3 mb-0 pt-1 ps-1 text-center text-md-start">
+              <ul class="pb-3 mb-0 ms-2 pt-1 ps-1 text-center text-md-start">
                 <li
-                  class="mb-3 d-flex flex-column flex-md-row align-items-center"
+                  class="mb-3 ms-2 d-flex flex-column flex-md-row align-items-center"
                   style="list-style: none"
                 >
                   <img
@@ -388,21 +380,23 @@
 
       <!-- Amenities -->
 
-      <section class="amenities" id="amenities">
-        <div class="amenities-wrapper">
+      <section class="amenities position-relative" id="amenities">
+        <div class="amenities-wrapper d-none d-md-flex">
           <div
             class="amenities-head"
             style="
               background-image: url(assets/assets/amenities/first\ box.png);
             "
           >
-            <h2 style="font-size: 3.5rem; font-weight: 400">Amenities</h2>
+        
+            <h2>Amenities</h2>
           </div>
           <div class="expanding-cards">
             <div
               class="amenities-img-card position-relative text-center"
               style="background-image: url('assets/assets/amenities/club.jpg')"
             >
+            <div class="backdrop-overlay"></div>
               <div class="overlay-content h-100">
                 <div class="expanding-card-head">
                   <h3>Clubhouse</h3>
@@ -425,6 +419,7 @@
                 background-image: url('assets/assets/amenities/swimming.jpg');
               "
             >
+            <div class="backdrop-overlay"></div>
               <div class="overlay-content h-100">
                 <div class="expanding-card-head">
                   <h3>Swimming Pool</h3>
@@ -445,6 +440,7 @@
               class="amenities-img-card position-relative text-center"
               style="background-image: url('assets/assets/amenities/gym.jpg')"
             >
+            <div class="backdrop-overlay"></div>
               <div class="overlay-content h-100">
                 <div class="expanding-card-head">
                   <h3>Gymnasium</h3>
@@ -465,6 +461,7 @@
               class="amenities-img-card position-relative text-center"
               style="background-image: url('assets/assets/amenities/spa.jpg')"
             >
+            <div class="backdrop-overlay"></div>
               <div class="overlay-content h-100">
                 <div class="expanding-card-head">
                   <h3>Spa</h3>
@@ -485,6 +482,7 @@
                 background-image: url('assets/assets/amenities/multi-cuine-restaurant.jpg');
               "
             >
+            <div class="backdrop-overlay"></div>
               <div class="overlay-content h-100">
                 <div class="expanding-card-head">
                   <h3>Multi-cuisine Restaurant</h3>
@@ -505,6 +503,7 @@
               class="amenities-img-card position-relative text-center"
               style="background-image: url('assets/assets/amenities/kids.jpg')"
             >
+            <div class="backdrop-overlay"></div>
               <div class="overlay-content h-100">
                 <div class="expanding-card-head">
                   <h3>Kids play area</h3>
@@ -520,6 +519,7 @@
               </div>
             </div>
             <!-- <div class="amenities-img-card position-relative text-center" style="background-image: url('assets/assets/amenities/');">
+                <div class="backdrop-overlay"></div>
             <div class="overlay-content d-flex flex-column justify-content-center align-items-center h-100">
               <h3 class="text-gold">Spiritual Zone</h3>
               <p class="text-muted small">Discover serene spiritual zones for contemplation, meditation areas embraced by nature & heartwarming interaction spots.</p>
@@ -532,15 +532,288 @@
           <div class="button">
             <div class="expand-card-button-next">
               <img
-                src="/assets/assets/floor plan/arrow right.png"
+                src="/assets/assets/floor plan/arrow left.png"
                 alt="right-arrow"
               />
             </div>
             <div class="expand-card-button-prev">
               <img
-                src="/assets/assets/floor plan/arrow left.png"
+                src="/assets/assets/floor plan/arrow right.png"
                 alt="left-arrow"
               />
+            </div>
+          </div>
+        </div>
+
+        <div class="amenities-accordion d-block d-md-none">
+          <div
+            class="heading"
+            style="
+              background-image: url('assets/mobile assests/amenities/box\ amenities.png');
+            "
+          >
+            Amenities
+          </div>
+          <div class="accordion mb-4 container" id="amenitiesAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  Clubhouse
+                  <img
+                    src="assets/mobile assests/amenities/plus icon.png"
+                    alt=""
+                  />
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#amenitiesAccordion"
+              >
+                <div
+                  class="accordion-body"
+                  style="
+                    background-image: url('assets/assets/amenities/club.jpg');
+                  "
+                >
+                  <div class="backdrop-overlay"></div>
+                  <div class="heading">
+                    <h3>Clubhouse</h3>
+                    <img
+                      src="assets/assets/amenities/basketball court line_.png"
+                      alt="Clubhouse Line"
+                    />
+                  </div>
+                  <p>
+                    Chill at the coffee lounge or relax at the spa or maybe you
+                    want to win a game and feel like the king of the world, it’s
+                    all here
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  Swimming pool
+                  <img
+                    src="assets/mobile assests/amenities/plus icon.png"
+                    alt=""
+                  />
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse "
+                aria-labelledby="headingTwo"
+                data-bs-parent="#amenitiesAccordion"
+              >
+                <div
+                  class="accordion-body"
+                  style="
+                    background-image: url('assets/assets/amenities/swimming.jpg');
+                  "
+                >
+                  <div class="backdrop-overlay"></div>
+                  <div class="heading">
+                    <h3>Pool</h3>
+                    <img
+                      src="assets/assets/amenities/basketball court line_.png"
+                      alt="Clubhouse Line"
+                    />
+                  </div>
+                  <p>
+                    Dive into luxury, and immerse in serenity as the pool
+                    becomes an oasis of extraordinary relaxation.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                >
+                  Gymnasium
+                  <img
+                    src="assets/mobile assests/amenities/plus icon.png"
+                    alt=""
+                  />
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse "
+                aria-labelledby="headingThree"
+                data-bs-parent="#amenitiesAccordion"
+              >
+                <div
+                  class="accordion-body"
+                  style="
+                    background-image: url('assets/assets/amenities/gym.jpg');
+                  "
+                >
+                  <div class="backdrop-overlay"></div>
+                  <div class="heading">
+                    <h3>Gymnasium</h3>
+                    <img
+                      src="assets/assets/amenities/basketball court line_.png"
+                      alt="Clubhouse Line"
+                    />
+                  </div>
+                  <p>
+                    Elevate fitness and transform life as the gym becomes the
+                    path to extraordinary wellness.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                >
+                  Spa
+                  <img
+                    src="assets/mobile assests/amenities/plus icon.png"
+                    alt=""
+                  />
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse "
+                aria-labelledby="headingFour"
+                data-bs-parent="#amenitiesAccordion"
+              >
+                <div
+                  class="accordion-body"
+                  style="
+                    background-image: url('assets/assets/amenities/spa.jpg');
+                  "
+                >
+                  <div class="backdrop-overlay"></div>
+                  <div class="heading">
+                    <h3>Spa</h3>
+                    <img
+                      src="assets/assets/amenities/basketball court line_.png"
+                      alt="Clubhouse Line"
+                    />
+                  </div>
+                  <p>
+                    Indulge in bliss, rejuvenate the soul as the spa becomes an
+                    escape to pure tranquillity.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                >
+                  Multi-cuisine restaurant
+                  <img
+                    src="assets/mobile assests/amenities/plus icon.png"
+                    alt=""
+                  />
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                class="accordion-collapse collapse "
+                aria-labelledby="headingFive"
+                data-bs-parent="#amenitiesAccordion"
+              >
+                <div
+                  class="accordion-body"
+                  style="
+                    background-image: url('assets/assets/amenities/multi-cuine-restaurant.jpg');
+                  "
+                >
+                  <div class="backdrop-overlay"></div>
+                  <div class="heading">
+                    <h3> Restaurant</h3>
+                    <img
+                      src="assets/assets/amenities/basketball court line_.png"
+                      alt="Clubhouse Line"
+                    />
+                  </div>
+                  <p>
+                    Indulge in flavours from around the world at this
+                    multi-cuisine restaurant. Where every meal is a journey, and
+                    every bite a celebration.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                >
+                  Kids play are
+                  <img
+                    src="assets/mobile assests/amenities/plus icon.png"
+                    alt=""
+                  />
+                </button>
+              </h2>
+              <div
+                id="collapseSix"
+                class="accordion-collapse collapse "
+                aria-labelledby="headingSix"
+                data-bs-parent="#amenitiesAccordion"
+              >
+                <div
+                  class="accordion-body"
+                  style="
+                    background-image: url('assets/assets/amenities/kids.jpg');
+                  "
+                >
+                  <div class="backdrop-overlay"></div>
+                  <div class="heading">
+                    <h3>Kids play are</h3>
+                    <img
+                      src="assets/assets/amenities/basketball court line_.png"
+                      alt="Clubhouse Line"
+                    />
+                  </div>
+                  <p>
+                    Discover serene spiritual zones for contemplation,
+                    meditation areas embraced by nature & heartwarming
+                    interaction spots.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -550,126 +823,125 @@
 
       <section
         id="location"
-        class="location-section py-3 pb-0 py-md-5 pb-md-0"
-        style="background-color: var(--beige)"
+        class="location py-3 pb-0 py-md-5 pb-md-0"
+       style="background-image: url('assets/assets/location/bg\ colour.png');background-repeat: no-repeat;"
       >
-        <div class="container text-center">
-          <h2 class="fw-bold" style="font-size: 2.5rem">Location</h2>
+        <div class="container text-center"
+        >
+          <h2 class="" >Location</h2>
 
-          <h3 class="mt-3" style="font-size: 1.5rem">
+          <h3 class="mt-2 mt-md-3" >
             Live Where Extraordinary Surrounds You
           </h3>
 
-          <p class="mt-4" style="font-size: 1rem">
+          <p class="mt-2 mt-md-4" >
             Immerse yourself in a larger ecosystem — A neighbourhood adorned
             with Planned Greens, seamlessly blending urban sophistication with
             natural beauty. Everything you desire is just moments away,
             promising hours of convenient amusement.
           </p>
         </div>
-        <div class="location-points position-relative mt-5">
+        <div class="location-points position-relative mt-5 "      >
           <img
             src="assets/assets/location/location line_.png"
             alt=""
             class="position-absolute img-fluid"
             style="top: 18%; z-index: 0"
           />
-
-          <div class="container">
+          <div
+          class="location-points-row row justify-content-around align-items-start position-relative"
+          style="z-index: 5; width: 100%;"
+        >
+          <div
+            class="col-md-6 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
+          >
             <div
-              class="location-points-row row justify-content-around align-items-start position-relative"
-              style="z-index: 5"
+              class="image-wrapper rounded-circle shadow-sm bg-white mb-5 mb-md-3"
             >
-              <div
-                class="col-md-6 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
-              >
-                <div
-                  class="image-wrapper rounded-circle shadow-sm bg-white mb-3"
-                >
-                  <img
-                    src="assets/assets/location/connectivity icon.png"
-                    alt="Connectivity Icon"
-                    class="img-fluid"
-                  />
-                </div>
-                <h3 class="fw-bold text-center" style="color: var(--gold)">
-                  TRANSPORT CONNECTIVITY
-                </h3>
-                <p class="text-muted small text-center mb-1">
-                  NH-8 | SPR | Golf Course Ext. Road
-                </p>
-                <p class="text-muted small text-center">
-                  Delhi Mumbai Expressway | IGI Airport | Gurugram Railway
-                  Station
-                </p>
-              </div>
-
-              <div
-                class="col-md-6 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
-              >
-                <div
-                  class="image-wrapper rounded-circle shadow-sm bg-white mb-3"
-                >
-                  <img
-                    src="assets/assets/location/recreation icon.png"
-                    alt="Recreation Icon"
-                    class="img-fluid"
-                  />
-                </div>
-                <h3 class="fw-bold" style="color: var(--gold)">RECREATION</h3>
-                <p class="text-muted small text-center mb-1">
-                  Cricket Stadium | Golden Greens
-                </p>
-                <p class="text-muted small text-center">
-                  Golf & Resorts Limited | Jungle Safari & Trails
-                </p>
-              </div>
-
-              <div
-                class="col-md-6 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
-              >
-                <div
-                  class="image-wrapper rounded-circle shadow-sm bg-white mb-3"
-                >
-                  <img
-                    src="assets/assets/location/education.png"
-                    alt="Education Icon"
-                    class="img-fluid"
-                  />
-                </div>
-                <h3 class="fw-bold" style="color: var(--gold)">EDUCATION</h3>
-                <p class="text-muted small text-center mb-1">
-                  DPS, Amity, GD Goenka, The Heritage
-                </p>
-                <p class="text-muted small text-center">
-                  Pathways, St. Xaviers, Scottish High
-                </p>
-              </div>
-
-              <div
-                class="col-md-6 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
-              >
-                <div
-                  class="image-wrapper rounded-circle shadow-sm bg-white mb-3"
-                >
-                  <img
-                    src="assets/assets/location/hotels icon.png"
-                    alt="Hotels Icon"
-                    class="img-fluid"
-                  />
-                </div>
-                <h3 class="fw-bold" style="color: var(--gold)">HOTELS</h3>
-                <p class="text-muted small text-center mb-1">
-                  Taj, Double Tree by Hilton, Crowne Plaza
-                </p>
-                <p class="text-muted small text-center">
-                  Lemontree, Country Inn & Suites, Grand Hyatt
-                </p>
-              </div>
+              <img
+                src="assets/assets/location/connectivity icon.png"
+                alt="Connectivity Icon"
+                class="img-fluid"
+              />
             </div>
+            <h3 class=" text-center" >
+              TRANSPORT CONNECTIVITY
+            </h3>
+            <p class="text-muted small text-center mb-1">
+              NH-8 | SPR | Golf Course Ext. Road
+            </p>
+            <p class="text-muted small text-center">
+              Delhi Mumbai Expressway | IGI Airport | Gurugram Railway
+              Station
+            </p>
+          </div>
+
+          <div
+            class="col-md-6 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
+          >
+            <div
+              class="image-wrapper rounded-circle shadow-sm bg-white mb-3"
+            >
+              <img
+                src="assets/assets/location/recreation icon.png"
+                alt="Recreation Icon"
+                class="img-fluid"
+              />
+            </div>
+            <h3 class="" >RECREATION</h3>
+            <p class="text-muted small text-center mb-1">
+              Cricket Stadium | Golden Greens
+            </p>
+            <p class="text-muted small text-center">
+              Golf & Resorts Limited | Jungle Safari & Trails
+            </p>
+          </div>
+
+          <div
+            class="col-md-6 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
+          >
+            <div
+              class="image-wrapper rounded-circle shadow-sm bg-white mb-3"
+            >
+              <img
+                src="assets/assets/location/education.png"
+                alt="Education Icon"
+                class="img-fluid"
+              />
+            </div>
+            <h3 class="" >EDUCATION</h3>
+            <p class="text-muted small text-center mb-1">
+              DPS, Amity, GD Goenka, The Heritage
+            </p>
+            <p class="text-muted small text-center">
+              Pathways, St. Xaviers, Scottish High
+            </p>
+          </div>
+
+          <div
+            class="col-md-6 loc-point mb-4 d-flex flex-column justify-content-center align-items-center"
+          >
+            <div
+              class="image-wrapper rounded-circle shadow-sm bg-white mb-3"
+            >
+              <img
+                src="assets/assets/location/hotels icon.png"
+                alt="Hotels Icon"
+                class="img-fluid"
+              />
+            </div>
+            <h3 class="" >HOTELS</h3>
+            <p class="text-muted small text-center mb-1">
+              Taj, Double Tree by Hilton, Crowne Plaza
+            </p>
+            <p class="text-muted small text-center">
+              Lemontree, Country Inn & Suites, Grand Hyatt
+            </p>
           </div>
         </div>
-        <div class="location-navigation ">
+         
+        </div>
+        <div class="location-navigation">
           <div class="location-button-prev">
             <img
               src="/assets/assets/floor plan/arrow left.png"
@@ -682,7 +954,6 @@
               alt="right-arrow"
             />
           </div>
-        
         </div>
         <img
           src="assets/assets/location/image line art.png"
@@ -694,23 +965,25 @@
       <!-- location ends -->
 
       <!-- gallery -->
-      <section class="gallery py-5" id="gallery">
-        <div class="container text-center">
-          <h2 class="fw-bold" style="font-size: 2.5rem">Gallery</h2>
+      <section class="gallery position-relative py-5" id="gallery">
+        <div class="container text-center position-relative">
+          <h2 class="" >Gallery</h2>
 
-          <h3 class="mt-3" style="font-size: 1.5rem">
+          <h3 class="mt-2 mt-md-3" >
             Live Where Extraordinary Surrounds You
           </h3>
 
-          <p class="mt-4" style="font-size: 1rem">
+          <p class="mt-3 mt-md-4" style="font-size: 1rem">
             Immerse yourself in a larger ecosystem — A neighbourhood adorned
             with Planned Greens, seamlessly blending urban sophistication with
             natural beauty. Everything you desire is just moments away,
             promising hours of convenient amusement.
           </p>
         </div>
-        <div class="gallery-swiper-wrapper container position-relative mt-5">
-          <div class="gallery-swiper p-5">
+        <div
+          class="gallery-swiper-wrapper container position-relative mt-0 mt-md-5"
+        >
+          <div class="gallery-swiper p-1 p-md-5">
             <div class="swiper-slide">
               <div class="gallery-card text-center">
                 <img
@@ -718,8 +991,8 @@
                   alt="Grand Entrance"
                   class="img-fluid"
                 />
-                <h3 class="text-gold mt-3">Grand Entrance</h3>
-                <p class="text-muted small">
+                <h3 class=" mt-3">Grand Entrance</h3>
+                <p class="">
                   Your arrival begins with a discreet, dedicated driveway,
                   leading you directly to your haven.
                 </p>
@@ -733,8 +1006,8 @@
                   alt="Triple Height Lobby"
                   class="img-fluid"
                 />
-                <h3 class="text-gold mt-3">Triple Height Lobby</h3>
-                <p class="text-muted small">
+                <h3 class=" mt-3">Triple Height Lobby</h3>
+                <p class="">
                   From the moment you step inside, you're enveloped in an
                   atmosphere of refined opulence and timeless beauty.
                 </p>
@@ -748,8 +1021,8 @@
                   alt="Balcony"
                   class="img-fluid"
                 />
-                <h3 class="text-gold mt-3">Balcony</h3>
-                <p class="text-muted small">
+                <h3 class=" mt-3">Balcony</h3>
+                <p class="">
                   Embrace sun-kissed mornings in your expansive living spaces.
                 </p>
               </div>
@@ -762,8 +1035,8 @@
                   alt="Living Room"
                   class="img-fluid"
                 />
-                <h3 class="text-gold mt-3">Living Room</h3>
-                <p class="text-muted small">
+                <h3 class=" mt-3">Living Room</h3>
+                <p class="">
                   Every detail, from the curated artwork to the polished
                   finishes, whispers of sophisticated elegance.
                 </p>
@@ -777,8 +1050,8 @@
                   alt="Bedroom"
                   class="img-fluid"
                 />
-                <h3 class="text-gold mt-3">Bedroom</h3>
-                <p class="text-muted small">
+                <h3 class=" mt-3">Bedroom</h3>
+                <p class="">
                   The well organized expansive rooms provide ample space for
                   families, couples, or anyone who craves a private retreat
                   within the city's embrace.
@@ -793,8 +1066,8 @@
                   alt="Kitchen"
                   class="img-fluid"
                 />
-                <h3 class="text-gold mt-3">Kitchen</h3>
-                <p class="text-muted small">
+                <h3 class=" mt-3">Kitchen</h3>
+                <p class="">
                   Kitchens are outfitted with premium fixtures and fittings to
                   dish up a touch of sophistication.
                 </p>
@@ -808,8 +1081,8 @@
                   alt="Bathroom"
                   class="img-fluid"
                 />
-                <h3 class="text-gold mt-3">Bathroom</h3>
-                <p class="text-muted small">
+                <h3 class=" mt-3">Bathroom</h3>
+                <p class="">
                   Every element, from the high-tech fixtures to the bespoke
                   amenities, is designed to pamper you, indulge you, and leave
                   you feeling renewed and revitalized.
@@ -817,12 +1090,8 @@
               </div>
             </div>
           </div>
-
           <!-- navigation -->
-          <div
-            class="gallery-arrows position-absolute"
-            style="top: 103%; right: 10%"
-          >
+          <div class="gallery-arrows position-absolute">
             <div class="gallery-swiper-button-next">
               <img
                 src="assets/assets/gallery/arrow left.png"
@@ -841,47 +1110,47 @@
       <!-- gallery ends -->
       <!-- Floor Plan -->
 
-      <section id="floor" class="floor py-5">
+      <section id="floor" class="floor py-0 py-md-5">
         <div class="container pb-5">
-          <h1 class="w-100 text-center">Floor Plan</h1>
-          <p class="w-100 text-center">
+          <h2 class="w-100 text-center">Floor Plan</h2>
+          <p class="w-70 text-center">
             Designed for flow, crafted for comfort - your dream home begins with
             the perfect floor plan.
           </p>
           <div
-            class="swiper position-relative pb-5"
+            class="swiper position-relative pb-0 pb-md-5"
             style="width: 100%; height: fit-content; max-width: 1180px"
           >
             <!-- Additional required wrapper -->
-          <div class="floor-swiper">
-            <div class="swiper-slide">
-              <div class="mx-auto" style="width: 85%">
-                <img
-                  src="/assets/assets/floor plan/left image.png"
-                  alt="floor-img"
-                  class="w-100"
-                />
+            <div class="floor-swiper">
+              <div class="swiper-slide">
+                <div class="mx-auto" style="width: 85%">
+                  <img
+                    src="/assets/assets/floor plan/left image.png"
+                    alt="floor-img"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mx-auto" style="width: 85%">
+                  <img
+                    src="/assets/assets/floor plan/right image.png"
+                    alt="floor-img"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="mx-auto" style="width: 85%">
+                  <img
+                    src="/assets/assets/floor plan/left image.png"
+                    alt="floor-img"
+                    class="w-100"
+                  />
+                </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="mx-auto" style="width: 85%">
-                <img
-                  src="/assets/assets/floor plan/right image.png"
-                  alt="floor-img"
-                  class="w-100"
-                />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="mx-auto" style="width: 85%">
-                <img
-                  src="/assets/assets/floor plan/left image.png"
-                  alt="floor-img"
-                  class="w-100"
-                />
-              </div>
-            </div>
-          </div>
 
             <!-- If we need navigation buttons -->
             <div class="swiper-arrows">
@@ -929,11 +1198,11 @@
           <div class="span"></div>
         </div>
 
-        <div class="d-flex get-in-touch-wrapper">
+        <div class="d-flex get-in-touch-wrapper" id="form-get-in-touch">
           <div class="d-flex justify-content-around w-100">
             <div class="empty-area d-none" style="width: 20%"></div>
             <div class="get-in-touch-form">
-              <h2 class="mb-4 fw-bold">GET IN TOUCH</h2>
+              <h2 class="mb-4">GET IN TOUCH</h2>
               <form class="w-100">
                 <div class="mb-5">
                   <input
@@ -1009,15 +1278,15 @@
             class="footer-content container d-flex flex-column flex-md-row justify-content-md-between align-items-md-start text-center text-md-start"
           >
             <div class="left-content mb-3 mb-md-0">
-              <p class="text-bold" style="font-size: 12px; margin-bottom: 8px">
+              <p class="text-bold" style="margin-bottom: 8px">
                 HAREA No.:RC/REP/HAREA/GGM/849/581/2024/76 Dated: 15.07.2024
               </p>
-              <p class="text-bold" style="font-size: 12px">
+              <p class="text-bold" >
                 WWW.HARYANAAREA.GOV.IN
               </p>
             </div>
             <div class="right-content">
-              <p class="text-bold" style="font-size: 12px">
+              <p class="text-bold" >
                 Design by Dotwise Pt. Ltd.
               </p>
             </div>
@@ -1066,8 +1335,8 @@
       // location-points-row
       $(".location-points-row").slick({
         slidesToShow: 5,
-        prevArrow: $('.location-button-prev'),
-        nextArrow: $('.location-button-next'),
+        prevArrow: $(".location-button-prev"),
+        nextArrow: $(".location-button-next"),
         responsive: [
           {
             breakpoint: 768,
@@ -1091,17 +1360,16 @@
       });
 
       $(".floor-swiper").slick({
-
         slidesToShow: 2,
         prevArrow: $(".floor-swiper-button-next"),
         nextArrow: $(".floor-swiper-button-prev"),
-        arrows:true,
+        arrows: true,
         responsive: [
           {
             breakpoint: 768,
             settings: {
               arrows: true,
-            
+
               slidesToShow: 2,
             },
           },
@@ -1114,7 +1382,6 @@
           },
         ],
       });
-
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

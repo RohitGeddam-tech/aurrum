@@ -1,82 +1,21 @@
+// Select all the image cards
+const cards = document.querySelectorAll('.amenities-img-card');
 
+// Function to remove 'active' class from all cards
+function removeActiveClasses() {
+  cards.forEach(card => {
+    card.classList.remove('active');
+  });
+}
 
-// const swiper = new Swiper(".swiper", {
-//   direction: "horizontal",
-//   loop: true,
-//   slidesPerView: 2,
-//   spaceBetween: 1,
-//   breakpoints: {
-//     640: {
-//       slidesPerView: 1,
-//       spaceBetween: 0,
-//     },
-//     1024: {
-//       slidesPerView: 2,
-//       spaceBetween: 30,
-//     },
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
+// Loop over each card to add event listeners
+cards.forEach(card => {
+  // Add hover event listener
+  card.addEventListener('mouseenter', () => {
+    removeActiveClasses(); // Remove 'active' from all cards
+    card.classList.add('active'); // Add 'active' to the hovered card
+  });
+});
 
-// const swiperBanner = new Swiper(".banner-swiper", {
-//   loop: true,
-//   direction: "horizontal",
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
-// const ExpandingCardBanner = new Swiper(".expanding-cards", {
-//   loop: false,
-//   slidesPerView: 5,
-//   spaceBetween: 0, // No space between slides
-//   navigation: {
-//     nextEl: ".expand-card-button-next",
-//     prevEl: ".expand-card-button-prev",
-//   },
-// });
-// const swiperGallery = new Swiper('.gallery-swiper', {
-//   loop: true,
-//   centeredSlides: true,
-//   watchOverflow: true,
-//   updateOnWindowResize: true,
-//   loopSlides: 7,
-//   slidesPerView: 3,
-//   spaceBetween: 36,
-//   navigation: {
-//     nextEl: '.gallery-swiper-button-next',
-//     prevEl: '.gallery-swiper-button-prev',
-//   },
-// });
-
-// $('.expanding-cards').slick({
-//   centerMode: true,
-//   centerPadding: '10px',
-//   slidesToShow: 3,
-  
-//   responsive: [
-//     {
-//       breakpoint: 768,
-//       settings: {
-//         arrows: false,
-//         centerMode: true,
-//         centerPadding: '40px',
-//         slidesToShow: 3
-//       }
-//     },
-//     {
-//       breakpoint: 480,
-//       settings: {
-//         arrows: false,
-//         centerMode: true,
-//         centerPadding: '40px',
-//         slidesToShow: 1
-//       }
-//     }
-//   ]
-// });
-
-
+// Optionally, set the first card as active initially
+cards[0].classList.add('active');
