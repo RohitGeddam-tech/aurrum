@@ -107,119 +107,119 @@ function validateEmail() {
 }
 
 
-// form submit 
-const form1 = document.getElementById('idForm');
-form1.addEventListener('submit', function (event) {
-  event.preventDefault();
-  if (checkName(form1) && checkNumber(form1)  && checkEmail(form1)) {
-    const name = form1.querySelector('#nameInput');
-    const number = form1.querySelector('#numberInput');
-    const email= form1.querySelector('#emailInput');
+// // form submit 
+// const form1 = document.getElementById('idForm');
+// form1.addEventListener('submit', function (event) {
+//   event.preventDefault();
+//   if (checkName(form1) && checkNumber(form1)  && checkEmail(form1)) {
+//     const name = form1.querySelector('#nameInput');
+//     const number = form1.querySelector('#numberInput');
+//     const email= form1.querySelector('#emailInput');
 
-    sendData(name.value, number.value,email.value,message)
-  }
-});
+//     sendData(name.value, number.value,email.value,message)
+//   }
+// });
 
-function clearForm(form1) {
-  form1.reset();
-}
+// function clearForm(form1) {
+//   form1.reset();
+// }
  
-function sendData(name, number,email,message) {
+// function sendData(name, number,email,message) {
 
-    const emailToSend =email.trim() === '' ? 'dummy@gmail.com' : email;
+//     const emailToSend =email.trim() === '' ? 'dummy@gmail.com' : email;
 
-    const apiUrl = "https://api.sugarlogger.com/contact_us";
-    const requestBody = JSON.stringify({
-      email:emailToSend,
-      mobile: number,
-      name: name,
-      type: "wb_home"
-    });
+//     const apiUrl = "https://api.sugarlogger.com/contact_us";
+//     const requestBody = JSON.stringify({
+//       email:emailToSend,
+//       mobile: number,
+//       name: name,
+//       type: "wb_home"
+//     });
 
-  fetch(apiUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: requestBody,
-  })
-    .then(response => response.json())
-    .then(data => {
-      handleApiResponse(data);
-    })
-    .catch(error => console.error("Error:", error));
-}
+//   fetch(apiUrl, {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: requestBody,
+//   })
+//     .then(response => response.json())
+//     .then(data => {
+//       handleApiResponse(data);
+//     })
+//     .catch(error => console.error("Error:", error));
+// }
 
-function handleApiResponse(response) {
-  const nameInput = form.querySelector('#nameInput');
-  const nameLabel = form.querySelector('#span-name');
-  const numberInput = form.querySelector('#numberInput');
-  const numberLabel = form.querySelector('#span-number');
-  if (response.success) {
-    clearForm(form1);
-    closeForm();
-    showThankYouDialog();
+// function handleApiResponse(response) {
+//   const nameInput = form.querySelector('#nameInput');
+//   const nameLabel = form.querySelector('#span-name');
+//   const numberInput = form.querySelector('#numberInput');
+//   const numberLabel = form.querySelector('#span-number');
+//   if (response.success) {
+//     clearForm(form1);
+//     closeForm();
+//     showThankYouDialog();
 
-  } else {
-    nameInput.classList.remove("error");
-    nameLabel.classList.remove("errorText");
-    numberInput.classList.remove("error");
-    numberLabel.classList.remove("errorText");
-  }
-}
-function checkName(form) {
-  const nameInput = form.querySelector('#nameInput');
-  const nameLabel = form.querySelector('#span-name');
-  const nameRegex = /^[a-zA-Z\s]{3,}$/;
+//   } else {
+//     nameInput.classList.remove("error");
+//     nameLabel.classList.remove("errorText");
+//     numberInput.classList.remove("error");
+//     numberLabel.classList.remove("errorText");
+//   }
+// }
+// function checkName(form) {
+//   const nameInput = form.querySelector('#nameInput');
+//   const nameLabel = form.querySelector('#span-name');
+//   const nameRegex = /^[a-zA-Z\s]{3,}$/;
 
-  if (!nameRegex.test(nameInput.value)) {
+//   if (!nameRegex.test(nameInput.value)) {
   
-    nameInput.classList.add("error");
-    nameLabel.classList.add("errorText");
+//     nameInput.classList.add("error");
+//     nameLabel.classList.add("errorText");
 
-    return false;
-  } else {
-    nameInput.classList.remove("error");
-    nameLabel.classList.remove("errorText");
+//     return false;
+//   } else {
+//     nameInput.classList.remove("error");
+//     nameLabel.classList.remove("errorText");
 
-  }
+//   }
 
-  return true;
-}
+//   return true;
+// }
 
-function checkNumber(form) {
-  const numberInput = form.querySelector('#numberInput');
-  const numberLabel = form.querySelector('#span-number');
-  const numberRegex = /^[6-9]\d{9}$/;
+// function checkNumber(form) {
+//   const numberInput = form.querySelector('#numberInput');
+//   const numberLabel = form.querySelector('#span-number');
+//   const numberRegex = /^[6-9]\d{9}$/;
 
-  if (!numberRegex.test(numberInput.value)) {
+//   if (!numberRegex.test(numberInput.value)) {
 
-    numberInput.classList.add("error");
-    numberLabel.classList.add("errorText");
+//     numberInput.classList.add("error");
+//     numberLabel.classList.add("errorText");
 
-    return false;
-  } else {
-    numberInput.classList.remove("error");
-    numberLabel.classList.remove("errorText");
-  }
+//     return false;
+//   } else {
+//     numberInput.classList.remove("error");
+//     numberLabel.classList.remove("errorText");
+//   }
 
-  return true;
-}
-function checkEmail(form){
-  const emailInput=form.querySelector("#emailInput");
-  const emailLabel=form.querySelector("#span-email");
-  const  emailRegex=/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+(@gmail.com)$/gmi;
+//   return true;
+// }
+// function checkEmail(form){
+//   const emailInput=form.querySelector("#emailInput");
+//   const emailLabel=form.querySelector("#span-email");
+//   const  emailRegex=/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+(@gmail.com)$/gmi;
 
-if(emailInput.value==""){
-  return true;
-} else if (!emailRegex.test(emailInput.value)) {
-    emailInput.classList.add("error");
-    emailLabel.classList.add("errorText");
+// if(emailInput.value==""){
+//   return true;
+// } else if (!emailRegex.test(emailInput.value)) {
+//     emailInput.classList.add("error");
+//     emailLabel.classList.add("errorText");
 
-    return false;
-  } else {
-    emailInput.classList.remove("error");
-    emailLabel.classList.remove("errorText");
-  }
-return true;
-}
+//     return false;
+//   } else {
+//     emailInput.classList.remove("error");
+//     emailLabel.classList.remove("errorText");
+//   }
+// return true;
+// }

@@ -76,6 +76,10 @@
  scroll-margin-top: 70px;
 
 }
+html {
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+}
 /* @media (max-wdith:768px) {
   *{
   scroll-margin-top:100px ;
@@ -134,7 +138,6 @@ button {
 body {
   position: relative;
   /* width: 100%; */
-  overflow-x: hidden !important;
 }
 section{
   overflow: hidden;
