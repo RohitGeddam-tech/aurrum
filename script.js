@@ -102,7 +102,6 @@ function validateEmail() {
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!emailRegex.test(inputValue)) {
-    alert('Please enter a valid email address.');
     inputElement.value = '';
   }
 }
