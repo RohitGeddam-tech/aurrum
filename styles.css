@@ -73,7 +73,7 @@
   box-sizing: border-box;
   font-family: "optima";
   font-size: 16px;
-
+ scroll-margin-top: 70px;
 }
 /* @media (max-wdith:768px) {
   *{
@@ -187,7 +187,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--gold);
-  
   position: fixed;
   right: 0;
   top: 50%;
@@ -197,9 +196,6 @@ body {
   width: 35px;
   writing-mode: vertical-rl;
   text-align: center;
-}
-
-.enquire-now {
   color: #000;
   text-decoration: none;
  
