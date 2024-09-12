@@ -136,7 +136,9 @@ body {
   /* width: 100%; */
   overflow-x: hidden !important;
 }
-
+section{
+  overflow-x: hidden;
+}
 .screen-backdrop{
   display: none;
   position: absolute;
@@ -789,6 +791,7 @@ p {
 }
 
 @media (max-width: 768px) {
+ 
   .get-in-touch-wrapper {
     display: flex;
     justify-content: center;
@@ -821,6 +824,11 @@ p {
   .get-in-touch-form button{
    font-size: 16px !important;
    width: 125%;
+  }
+}
+@media (max-width:360px) {
+  .get-in-touch h2{
+    font-size: 2.2rem;
   }
 }
 /* footer */
