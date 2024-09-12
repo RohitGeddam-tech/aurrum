@@ -137,7 +137,7 @@ body {
   overflow-x: hidden !important;
 }
 section{
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .screen-backdrop{
   display: none;
