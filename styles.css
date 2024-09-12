@@ -74,6 +74,7 @@
   font-family: "optima";
   font-size: 16px;
  scroll-margin-top: 70px;
+
 }
 /* @media (max-wdith:768px) {
   *{
@@ -133,7 +134,7 @@ button {
 body {
   position: relative;
   /* width: 100%; */
-  /* overflow-x: hidden; */
+  overflow-x: hidden !important;
 }
 
 .screen-backdrop{
@@ -198,7 +199,6 @@ body {
   text-align: center;
   color: #000;
   text-decoration: none;
- 
   transform: rotate(180deg);
 }
 /* button{
@@ -210,6 +210,7 @@ body {
 }
 
 /* nav bar */
+
 .navbar-toggler{
   border: none;
   box-shadow: none !important;
@@ -223,12 +224,26 @@ body {
   box-shadow: none !important;
 }
 @media (max-width: 768px) {
+  
   .logo img {
     height: 36px;
     width: 100%;
   }
   .enquire-now {
-    top: 60%;
+    top: 40%;
+  }
+}
+@media (max-width:330px) {
+  .logo img {
+    height: 30px;
+    width: 100%;
+  }
+  .nav-link{
+    font-size: 12px !important;
+  }
+  .nav-link img{
+    height: 14px;
+    width: 14px;
   }
 }
 
@@ -718,6 +733,10 @@ p {
     right: 36px;
   }
   .floor form button{
+    justify-content: center;
+  }
+  .download-btn{
+
     justify-content: center;
   }
 }
