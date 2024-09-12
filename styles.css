@@ -133,7 +133,7 @@ button {
 body {
   position: relative;
   /* width: 100%; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .screen-backdrop{
