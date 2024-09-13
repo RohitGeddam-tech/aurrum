@@ -79,15 +79,15 @@ document.querySelectorAll('.nav-item').forEach(item => {
 
 function validateName(element) {
   let inputValue = element.value;
-  inputValue = inputValue.replace(/[^a-zA-Z\s]/g, ''); // Allow only letters and spaces
+  inputValue = inputValue.replace(/[^a-zA-Z\s]/g, ''); 
   element.value = inputValue;
 }
 
 function validateNumber(element) {
   let inputValue = element.value;
-  inputValue = inputValue.replace(/[^0-9]/g, ''); // Allow only numbers
+  inputValue = inputValue.replace(/[^0-9]/g, '');
   if (inputValue.length > 10) {
-    inputValue = inputValue.substring(0, 10); // Limit to 10 digits
+    inputValue = inputValue.substring(0, 10);
   }
   element.value = inputValue;
 }
