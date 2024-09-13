@@ -240,7 +240,7 @@ section{
     top: 40%;
   }
 }
-@media (max-width:330px) {
+@media (max-width:340px) {
   .logo img {
     height: 30px;
     width: 100%;
