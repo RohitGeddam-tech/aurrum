@@ -64,31 +64,32 @@
         </svg>
       </div>
       <h2 class="mb-4">GET IN TOUCH</h2>
-      <form class="w-100">
+      <form class="w-100"
+      onsubmit="handleSubmit(event)">
         <div class="mb-5">
           <input
             type="text"
-            class="custom-input"
+            class="custom-input nameInput"
             id="nameInput"
-            oninput="validateName()"
+            oninput="validateName(this)"
             placeholder="Name"
           />
         </div>
         <div class="mb-5">
           <input
             type="email"
-            class="custom-input"
+            class="custom-input emailInput"
             id="emailInput"
-            oninput="validateEmail()"
+            oninput="validateEmail(this)"
             placeholder="Email"
           />
         </div>
         <div class="mb-5">
           <input
             type="tel"
-            class="custom-input"
+            class="custom-input numberInput"
             id="numberInput"
-            oninput="validateNumber()"
+            oninput="validateNumber(this)"
             placeholder="Phone"
           />
         </div>
@@ -96,6 +97,7 @@
           type="submit"
           class="btn btn-primary px-5 py-1 rounded-0"
           style="background-color: var(--gold); border: none"
+ 
         >
           Schedule Site Visit
         </button>
@@ -271,13 +273,14 @@
               <h2 class="text-white me-4 mb-0" s>Enquire Now</h2>
               <form
                 class="d-none d-lg-flex justify-content-center align-items-center gap-3 py-4"
+                onsubmit="handleSubmit(event)"
               >
                 <input
                   type="text"
-                  class="form-control form-control-sm"
+                  class="form-control form-control-sm nameInput" 
                   placeholder="Name"
                   aria-label="Name"
-                  oninput="validateName()"
+                  oninput="validateName(this)"
                   style="
                     background-color: var(--gray);
                     border: none;
@@ -287,10 +290,10 @@
                 />
                 <input
                   type="email"
-                  class="form-control form-control-sm"
+                  class="form-control form-control-sm emailInput" 
                   placeholder="Email"
                   aria-label="Email"
-                  oninput="validateEmail()"
+                  oninput="validateEmail(this)"
                   style="
                     background-color: var(--gray);
                     border: none;
@@ -300,10 +303,10 @@
                 />
                 <input
                   type="tel"
-                  class="form-control form-control-sm"
+                  class="form-control form-control-sm numberInput"
                   placeholder="Phone"
                   aria-label="Phone"
-                  oninput="validateNumber()"
+                  oninput="validateNumber(this)"
                   style="
                     background-color: var(--gray);
                     border: none;
@@ -318,6 +321,7 @@
                     padding: 10px 46px;
                     border: none;
                   "
+         
                 >
                   Submit
                 </button>
@@ -1436,31 +1440,28 @@
             <div class="empty-area d-none" style="width: 20%"></div>
             <div class="get-in-touch-form">
               <h2 class="mb-4">GET IN TOUCH</h2>
-              <form class="w-100">
+              <form class="w-100"  onsubmit="handleSubmit(event)">
                 <div class="mb-5">
                   <input
                     type="text"
-                    class="custom-input"
-                    id="name"
-                    oninput="validateName()"
+                    class="custom-input nameInput"
+                    oninput="validateName(this)"
                     placeholder="Name"
                   />
                 </div>
                 <div class="mb-5">
                   <input
                     type="email"
-                    class="custom-input"
-                    id="email"
-                    oninput="validateEmail()"
+                    class="custom-input emailInput"
+                    oninput="validateEmail(this)"
                     placeholder="Email"
                   />
                 </div>
                 <div class="mb-5">
                   <input
                     type="tel"
-                    class="custom-input"
-                    id="phone"
-                    oninput="validateNumber()"
+                    class="custom-input numberInput"
+                    oninput="validateNumber(this)"
                     placeholder="Phone"
                   />
                 </div>
@@ -1468,10 +1469,12 @@
                   type="submit"
                   class="btn btn-primary px-5 py-2 rounded-0"
                   style="background-color: var(--gold); border: none"
+         
                 >
                   Schedule Site Visit
                 </button>
               </form>
+              
             </div>
           </div>
 
@@ -1518,7 +1521,7 @@
               <p class="text-bold">WWW.HARYANAAREA.GOV.IN</p>
             </div>
             <div class="right-content">
-              <p class="text-bold">Design by Dotwise Pt. Ltd.</p>
+              <p class="text-bold">Design by Dotwise Pvt. Ltd.</p>
             </div>
           </div>
         </div>

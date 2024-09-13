@@ -305,13 +305,15 @@ section{
  .artist-imp{
   position: absolute;
   top: 10%;
- left: 20%;
+ left: 18%;
   z-index: 12;
   font-size: 10px;
   color: var(--white);
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   font-family: unicode-optima;
+  width: fit-content !important;
+  /* background-color: red; */
  }
 @media (max-width:768px) {
   .overview p{
@@ -651,12 +653,15 @@ p {
 }
 
 .gallery-arrows {
+  z-index: 35;
+  top: 84%;
+  right: 12%;
   position: absolute;
   display: flex;
-  right: 16%;
   gap: 14px;
 }
 .gallery-card {
+  height:750px ;
   position: relative;
   perspective: 1500px;
 }
@@ -697,7 +702,21 @@ p {
 .gallery-swiper .slick-list {
   overflow: visible !important;
 }
+@media(max-width:1440px){
+  .gallery-card{
+    height: 670px;
+  }
+}
+
+@media(max-width:1220px){
+  .gallery-card{
+    height: 600px;
+  }
+}
 @media (max-width: 768px) {
+  .gallery-card{
+    height: 100%;
+  }
   .gallery-card img {
     padding: 0 36px;
   }
@@ -743,7 +762,7 @@ p {
 .floor .swiper-arrows {
   position: absolute;
   bottom: 20px;
-  right: 5.5%;
+  right: 2.5%;
   z-index: 1000;
   width: 100px;
   display: flex;
