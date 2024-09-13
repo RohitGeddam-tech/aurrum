@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
 
     <title>Aurrum</title>
     <link
@@ -277,6 +277,7 @@
                   class="form-control form-control-sm"
                   placeholder="Name"
                   aria-label="Name"
+                  oninput="validateName()"
                   style="
                     background-color: var(--gray);
                     border: none;
@@ -289,6 +290,7 @@
                   class="form-control form-control-sm"
                   placeholder="Email"
                   aria-label="Email"
+                  oninput="validateEmail()"
                   style="
                     background-color: var(--gray);
                     border: none;
@@ -301,6 +303,7 @@
                   class="form-control form-control-sm"
                   placeholder="Phone"
                   aria-label="Phone"
+                  oninput="validateNumber()"
                   style="
                     background-color: var(--gray);
                     border: none;
@@ -325,7 +328,7 @@
       </section>
 
       <!-- Overview -->
-      <section id="overview" class="overview py-3">
+      <section id="overview" class="overview py-3 pb-5 pb-md-0">
         <div class="container py-1 py-md-5">
           <div class="row align-items-center">
             <!-- Text and details section -->
@@ -364,11 +367,12 @@
 
               <!-- This image will be visible only on mobile devices (below 768px) -->
               <div
-                class="d-md-none text-center mb-5 mt-4 position-relative"
+                class="d-md-none text-center  mb-5 mt-4 position-relative"
                 data-aos="fade-left"
                 data-aos-delay="100"
                 data-aos-duration="800"
               >
+              <p class="artist-imp">ARTISTIC IMPRESSION</p>
                 <img
                   src="assets/mobile assests/overview/image.png"
                   alt="overview-img"
@@ -469,6 +473,7 @@
               data-aos-delay="100"
               data-aos-duration="800"
             >
+            <p class="artist-imp">ARTISTIC IMPRESSION</p>
               <img
                 src="assets/assets/overview/overview image.png"
                 alt="overview-img"
@@ -1128,7 +1133,7 @@
       <!-- location ends -->
 
       <!-- gallery -->
-      <section class="gallery position-relative py-5" id="gallery">
+      <section class="gallery position-relative py-5 pb-3 pb-md-0" id="gallery">
         <div class="container text-center position-relative">
           <h2
             class=""
@@ -1294,7 +1299,7 @@
       <!-- gallery ends -->
       <!-- Floor Plan -->
 
-      <section id="floor" class="floor py-0 pb-md-1 py-md-1 position-relative">
+      <section id="floor" class="floor py-0 pt-md-3 pb-5  pb-md-5 py-md-1 position-relative">
         <div class="container pb-md-2">
           <h2
             class="w-100 text-center"
@@ -1411,7 +1416,7 @@
         </button>
       </section>
       <!-- get in touch  -->
-      <section class="get-in-touch py-md-5 py-3 pt-5 pt-md-0" id="get-in-touch">
+      <section class="get-in-touch py-md-5 py-3 pt-3 pt-md-5 pt-md-0" id="get-in-touch">
         <div class="img-below-get-in-touch d-flex justify-content-between">
           <img
             src="assets/assets/below broucher image.png"
@@ -1437,6 +1442,7 @@
                     type="text"
                     class="custom-input"
                     id="name"
+                    oninput="validateName()"
                     placeholder="Name"
                   />
                 </div>
@@ -1445,6 +1451,7 @@
                     type="email"
                     class="custom-input"
                     id="email"
+                    oninput="validateEmail()"
                     placeholder="Email"
                   />
                 </div>
@@ -1453,6 +1460,7 @@
                     type="tel"
                     class="custom-input"
                     id="phone"
+                    oninput="validateNumber()"
                     placeholder="Phone"
                   />
                 </div>
@@ -1620,5 +1628,24 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="script.js"></script>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAqltC7id1z7TrnG1k96p0utuQA7ona_rE",
+        authDomain: "form-4s.firebaseapp.com",
+        projectId: "form-4s",
+        storageBucket: "form-4s.appspot.com",
+        messagingSenderId: "128035592508",
+        appId: "1:128035592508:web:8971baedcd6579bd182639",
+        measurementId: "G-C2KLT1PK5D"
+      };
+  
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
   </body>
 </html>

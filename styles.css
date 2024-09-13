@@ -140,7 +140,9 @@ body {
   /* width: 100%; */
 }
 section{
-  overflow: hidden;
+  /* overflow: hidden; */
+  scroll-margin-top: 90px;
+  overflow: clip;
 }
 .screen-backdrop{
   display: none;
@@ -300,10 +302,33 @@ section{
 /* .overview h3{
   font-size: ;
 } */
+ .artist-imp{
+  position: absolute;
+  top: 10%;
+ left: 20%;
+  z-index: 12;
+  font-size: 10px;
+  color: var(--white);
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-family: unicode-optima;
+ }
 @media (max-width:768px) {
   .overview p{
     width: 100%;
   }
+  .artist-imp{
+    position: absolute;
+    top: 10%;
+   left: 14%;
+    z-index: 12;
+    font-size: 10px;
+    color: var(--white);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-family: unicode-optima;
+    width: fit-content !important;
+   }
 }
 /* location */
 .location h2{
@@ -504,7 +529,7 @@ p {
   letter-spacing: 12px;
   padding: 14px 0;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 0px;
   margin-bottom: 24px;
   color: var(--font-grey);
   font-weight: 500;
@@ -826,7 +851,7 @@ p {
   }
   .get-in-touch-form button{
    font-size: 16px !important;
-   width: 125%;
+   width: 140%;
   }
 }
 @media (max-width:360px) {
