@@ -239,7 +239,6 @@ section {
   position: fixed;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
   z-index: 999;
   height: 170px;
   width: 35px;
@@ -247,7 +246,7 @@ section {
   text-align: center;
   color: #000;
   text-decoration: none;
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(50%);
 }
 /* button{
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 20px;
@@ -280,7 +279,7 @@ section {
     top: 40%;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 470px) {
   .logo img {
     height: 30px;
     width: 100%;
