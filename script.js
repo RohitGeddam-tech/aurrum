@@ -58,14 +58,21 @@ accordionButtons.forEach(button => {
 
 
 // navbar
+const menuToggle = document.querySelector("#mobile-menu");
+const navLinks = document.querySelector(".nav-links-mob");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
 function closeNavbar() {
-  const navbarCollapse = document.querySelector('.navbar-collapse');
+  const navbarCollapse = document.querySelector('.nav-links-mob');
   if (navbarCollapse.classList.contains('show')) {
     navbarCollapse.classList.remove('show');
   }
 }
 
-document.querySelectorAll('.nav-item').forEach(item => {
+document.querySelectorAll('.nav-links-mob').forEach(item => {
   item.addEventListener('click', function () {
     if (window.innerWidth < 768) {
       closeNavbar();
@@ -192,3 +199,4 @@ function checkEmail(form) {
 
   return true;
 }
+

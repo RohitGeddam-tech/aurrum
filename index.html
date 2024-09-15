@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
 
     <title>Aurrum</title>
     <link
@@ -43,7 +46,9 @@
   </head>
 
   <body>
-    <div class="enquire-now">Enquire Now</div>
+    <div class="enquire-wrapper">
+      <div class="enquire-now">Enquire Now</div>
+    </div>
     <div class="screen-backdrop"></div>
     <div class="pop-up-form">
       <div id="close-button">
@@ -64,8 +69,7 @@
         </svg>
       </div>
       <h2 class="mb-4">GET IN TOUCH</h2>
-      <form class="w-100"
-      onsubmit="handleSubmit(event)">
+      <form class="w-100" onsubmit="handleSubmit(event)">
         <div class="mb-5">
           <input
             type="text"
@@ -96,14 +100,13 @@
           type="submit"
           class="btn btn-primary px-5 py-1 rounded-0"
           style="background-color: var(--gold); border: none"
- 
         >
           Schedule Site Visit
         </button>
       </form>
     </div>
-   
-    <nav
+
+    <!-- <nav
       class="navbar pt-2 pb-2 navbar-expand-lg fixed-top"
       style="background-color: var(--white); z-index: 999"
     >
@@ -188,21 +191,72 @@
           </ul>
         </div>
       </div>
+    </nav> -->
+
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="#">
+            <img src="assets/assets/the aurrium logo.png" alt="The Aurrium Logo" />
+          </a>
+        </div>
+    
+        <div class="menu-wrapper">
+          <a href="tel:18005721000">
+            <img src="assets/assets/call button.png" alt="Call Button" /> 18005721000
+          </a>
+          <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+    
+        <div class="menu-li-wrapper">
+          <div class="phone-link">
+            <a href="tel:18005721000">
+              <img src="assets/assets/call button.png" alt="Call Button" /> 18005721000
+            </a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#specification">Specification</a></li>
+            <li><a href="#floor">Floor Plan</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#price">Price</a></li>
+            <li><a href="#get-in-touch">Get In Touch</a></li>
+          </ul>
+        </div>
+    
+        <ul class="nav-links-mob">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#specification">Specification</a></li>
+          <li><a href="#floor">Floor Plan</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#price">Price</a></li>
+          <li><a href="#get-in-touch">Get In Touch</a></li>
+        </ul>
+      </div>
     </nav>
+    
 
     <main>
       <!-- Banner -->
 
-      <section id="banner" class="banner"  style="height: 100vh;">
+      <section id="banner" class="banner" style="height: 100vh">
         <div class="container-fluid p-0">
-          <div class="banner-section position-relative text-center text-white" >
+          <div class="banner-section position-relative text-center text-white">
             <div class="banner-swiper">
               <div class="swiper-slide">
                 <img
                   src="assets/assets/main banner/banner.png"
                   class="img-fluid w-100"
                   alt="Banner Image"
-                  style="object-fit: cover;  height: 100vh;"
+                  style="object-fit: cover; height: 100vh"
                 />
                 <div
                   class="banner-text position-absolute top-50 start-50 translate-middle"
@@ -276,7 +330,7 @@
               >
                 <input
                   type="text"
-                  class="form-control form-control-sm nameInput" 
+                  class="form-control form-control-sm nameInput"
                   placeholder="Name"
                   aria-label="Name"
                   oninput="validateName(this)"
@@ -289,10 +343,9 @@
                 />
                 <input
                   type="email"
-                  class="form-control form-control-sm emailInput" 
+                  class="form-control form-control-sm emailInput"
                   placeholder="Email"
                   aria-label="Email"
-           
                   style="
                     background-color: var(--gray);
                     border: none;
@@ -320,7 +373,6 @@
                     padding: 10px 46px;
                     border: none;
                   "
-         
                 >
                   Submit
                 </button>
@@ -346,7 +398,7 @@
                 Overview
               </h2>
               <h3
-                class="mb-0 mb-md-1"
+                class="mt-1 mt-md-0 mb-0 mb-md-1"
                 data-aos="fade-up"
                 data-aos-delay="150"
                 data-aos-duration="800"
@@ -370,12 +422,12 @@
 
               <!-- This image will be visible only on mobile devices (below 768px) -->
               <div
-                class="d-md-none text-center  mb-5 mt-4 position-relative"
+                class="d-md-none text-center mb-5 mt-4 position-relative"
                 data-aos="fade-left"
                 data-aos-delay="100"
                 data-aos-duration="800"
               >
-              <p class="artist-imp">ARTISTIC IMPRESSION</p>
+                <p class="artist-imp">ARTISTIC IMPRESSION</p>
                 <img
                   src="assets/mobile assests/overview/image.png"
                   alt="overview-img"
@@ -476,7 +528,7 @@
               data-aos-delay="100"
               data-aos-duration="800"
             >
-            <p class="artist-imp">ARTISTIC IMPRESSION</p>
+              <p class="artist-imp">ARTISTIC IMPRESSION</p>
               <img
                 src="assets/assets/overview/overview image.png"
                 alt="overview-img"
@@ -1302,7 +1354,10 @@
       <!-- gallery ends -->
       <!-- Floor Plan -->
 
-      <section id="floor" class="floor py-0 pt-md-3 pb-5  pb-md-5 py-md-1 position-relative">
+      <section
+        id="floor"
+        class="floor py-0 pt-md-3 pb-5 pb-md-5 py-md-1 position-relative"
+      >
         <div class="container pb-md-2">
           <h2
             class="w-100 text-center"
@@ -1419,7 +1474,10 @@
         </button>
       </section>
       <!-- get in touch  -->
-      <section class="get-in-touch py-md-5 py-3 pt-3 pt-md-5 pt-md-0" id="get-in-touch">
+      <section
+        class="get-in-touch py-md-5 py-3 pt-3 pt-md-5 pt-md-0"
+        id="get-in-touch"
+      >
         <div class="img-below-get-in-touch d-flex justify-content-between">
           <img
             src="assets/assets/below broucher image.png"
@@ -1439,7 +1497,7 @@
             <div class="empty-area d-none" style="width: 20%"></div>
             <div class="get-in-touch-form">
               <h2 class="mb-4">GET IN TOUCH</h2>
-              <form class="w-100"  onsubmit="handleSubmit(event)">
+              <form class="w-100" onsubmit="handleSubmit(event)">
                 <div class="mb-5">
                   <input
                     type="text"
@@ -1452,7 +1510,6 @@
                   <input
                     type="email"
                     class="custom-input emailInput"
-               
                     placeholder="Email"
                   />
                 </div>
@@ -1468,12 +1525,10 @@
                   type="submit"
                   class="btn btn-primary px-5 py-2 rounded-0"
                   style="background-color: var(--gold); border: none"
-         
                 >
                   Schedule Site Visit
                 </button>
               </form>
-              
             </div>
           </div>
 
@@ -1617,9 +1672,10 @@
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init(
+      AOS
+        .init
         // {once:true}
-      );
+        ();
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -1630,7 +1686,5 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="script.js"></script>
-
-  
   </body>
 </html>
