@@ -149,7 +149,7 @@ function handleSubmit(event) {
 const formData = {name:name, phone:phone, email:email}
  
 $.ajax({
-  url: "submit_lead.php",
+  url: "formdata.php",
   type: "POST",
   data: formData,
   success: function(response) {
