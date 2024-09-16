@@ -70,129 +70,40 @@
       </div>
       <h2 class="mb-4">GET IN TOUCH</h2>
       <form class="w-100" onsubmit="handleSubmit(event)">
-        <div class="mb-5">
-          <input
-            type="text"
-            class="custom-input nameInput"
-            id="nameInput"
+        <div class="mb-4">
+          <div class="form-group">
+            <input type="text" id="name"
             oninput="validateName(this)"
-            placeholder="Name"
-          />
+            class="nameInput" placeholder="Name">
+            <label for="name">Name</label>
+          </div>
+        </div>
+        <div class="mb-4">
+          <div class="form-group">
+            <input type="email" id="email"
+            class="emailInput" placeholder="Email">
+            <label for="name">Email</label>
+          </div>
         </div>
         <div class="mb-5">
-          <input
-            type="email"
-            class="custom-input emailInput"
-            id="emailInput"
-            placeholder="Email"
-          />
-        </div>
-        <div class="mb-5">
-          <input
-            type="tel"
-            class="custom-input numberInput"
-            id="numberInput"
+          <div class="form-group">
+            <input type="tel" id="number"
             oninput="validateNumber(this)"
-            placeholder="Phone"
-          />
+            class="numberInput" placeholder="Name">
+            <label for="name">Number</label>
+          </div>
         </div>
         <button
           type="submit"
-          class="btn btn-primary px-5 py-1 rounded-0"
+          class="btn btn-primary px-5 py-2 rounded-0"
           style="background-color: var(--gold); border: none"
         >
-          Schedule Site Visit
+    Submit
         </button>
       </form>
     </div>
 
-    <!-- <nav
-      class="navbar pt-2 pb-2 navbar-expand-lg fixed-top"
-      style="background-color: var(--white); z-index: 999"
-    >
-      <div class="container align-items-end d-flex">
-        <div class="logo">
-          <a class="navbar-brand align-items-center d-flex" href="#">
-            <img
-              src="assets/assets/the aurrium logo.png"
-              alt="Logo"
-              class="d-inline-block align-text-top"
-            />
-          </a>
-        </div>
-        <div class="d-flex flex-column align-items-end">
-          <a
-            class="nav-link d-block d-md-none call-btn"
-            aria-current="page"
-            href="tel:18005721000"
-          >
-            <img
-              src="assets/assets/call button.png"
-              alt="phone"
-              class="img-fluid"
-            />
-            18005721000
-          </a>
-          <button
-            class="navbar-toggler w-auto"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            style="margin-right: 0"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-
-        <div class="collapse navbar-collapse pt-5" id="navbarNav">
-          <ul class="navbar-nav ms-auto mt-1 position-relative">
-            <li
-              class="phone-link"
-              style="position: absolute; top: -50px; right: 0"
-            >
-              <a
-                class="nav-link d-none d-md-block"
-                aria-current="page"
-                href="tel:18005721000"
-              >
-                <img src="assets/assets/call button.png" alt="phone" />
-                18005721000
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#overview"
-                >Overview</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#amenities">Amenities</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#location">Location</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#specification">Specification</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#floor">Floor Plan</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#gallery">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#price">Price</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#get-in-touch">Get In Touch</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav> -->
-
+  
     <nav class="navbar">
       <div class="container">
         <div class="logo">
@@ -325,47 +236,33 @@
             >
               <h2 class="text-white me-4 mb-0" s>Enquire Now</h2>
               <form
-                class="d-none d-lg-flex justify-content-center align-items-center gap-3 py-4"
+                class="banner-form d-none d-lg-flex justify-content-center align-items-center gap-3 py-4"
                 onsubmit="handleSubmit(event)"
               >
-                <input
-                  type="text"
-                  class="form-control form-control-sm nameInput"
-                  placeholder="Name"
-                  aria-label="Name"
+              
+                <div class="form-group">
+                  <input type="text" id="name"
                   oninput="validateName(this)"
-                  style="
-                    background-color: var(--gray);
-                    border: none;
-                    border-radius: 0;
-                    outline: none;
-                  "
-                />
-                <input
-                  type="email"
-                  class="form-control form-control-sm emailInput"
-                  placeholder="Email"
-                  aria-label="Email"
-                  style="
-                    background-color: var(--gray);
-                    border: none;
-                    border-radius: 0;
-                    outline: none;
-                  "
-                />
-                <input
-                  type="tel"
-                  class="form-control form-control-sm numberInput"
-                  placeholder="Phone"
-                  aria-label="Phone"
+                  class="nameInput" placeholder="Name">
+                  <label for="name">Name</label>
+                </div>
+      
+           
+              
+                <div class="form-group">
+                  <input type="email" id="email"
+                  class="emailInput" placeholder="Email">
+                  <label for="name">Email</label>
+                </div>
+             
+          
+              
+                <div class="form-group">
+                  <input type="tel" id="number"
                   oninput="validateNumber(this)"
-                  style="
-                    background-color: var(--gray);
-                    border: none;
-                    border-radius: 0;
-                    outline: none;
-                  "
-                />
+                  class="numberInput" placeholder="Name">
+                  <label for="name">Number</label>
+                </div>
                 <button
                   class="btn rounded-0"
                   style="
@@ -419,8 +316,6 @@
                 seamlessly connect with the city's pulse, offering a lifestyle
                 as diverse as it is dynamic.
               </p>
-
-              <!-- This image will be visible only on mobile devices (below 768px) -->
               <div
                 class="d-md-none text-center mb-5 mt-4 position-relative"
                 data-aos="fade-left"
@@ -455,8 +350,6 @@
                   "
                 />
               </div>
-
-              <!-- List of features -->
               <ul
                 class="pb-3 mb-0 ms-2 pt-1 ps-1 text-center text-md-start"
                 data-aos="fade-right"
@@ -514,7 +407,7 @@
               </ul>
 
               <button
-                class="btn btn-primary px-5 py-2 rounded-0"
+                class="know-more btn btn-primary px-5 py-2 rounded-0"
                 style="background-color: var(--gold); border: none"
               >
                 Know More
@@ -580,7 +473,7 @@
                     alt=""
                   />
                 </div>
-                <p>
+                <p class="">
                   Chill at the coffee lounge or relax at the spa or maybe you
                   want to win a game and feel like the king of the world, it’s
                   all here
@@ -1205,7 +1098,7 @@
             data-aos-delay="150"
             data-aos-duration="800"
           >
-            Live Where Extraordinary Surrounds You
+          Where extraordinary moments come to life
           </h3>
 
           <p
@@ -1215,10 +1108,9 @@
             data-aos-delay="200"
             data-aos-duration="800"
           >
-            Immerse yourself in a larger ecosystem — A neighbourhood adorned
-            with Planned Greens, seamlessly blending urban sophistication with
-            natural beauty. Everything you desire is just moments away,
-            promising hours of convenient amusement.
+          Step into a world of expansive elegance, where every detail speaks of luxury. With soaring 11
+          ft. ceilings, the spacious living room invites endless possibilities, while the master bedroom
+          offers a sanctuary of comfort.          
           </p>
         </div>
         <div
@@ -1250,7 +1142,7 @@
                   alt="Triple Height Lobby"
                   class="img-fluid"
                 />
-                <h3 class="mt-3">Triple Height Lobby</h3>
+                <h3 class="mt-3">Double Height Lobby</h3>
                 <p class="">
                   From the moment you step inside, you're enveloped in an
                   atmosphere of refined opulence and timeless beauty.
@@ -1498,35 +1390,35 @@
             <div class="get-in-touch-form">
               <h2 class="mb-4">GET IN TOUCH</h2>
               <form class="w-100" onsubmit="handleSubmit(event)">
-                <div class="mb-5">
-                  <input
-                    type="text"
-                    class="custom-input nameInput"
+                <div class="mb-4">
+                  <div class="form-group">
+                    <input type="text" id="name"
                     oninput="validateName(this)"
-                    placeholder="Name"
-                  />
+                    class="nameInput" placeholder="Name">
+                    <label for="name">Name</label>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <div class="form-group">
+                    <input type="email" id="email"
+                    class="emailInput" placeholder="Email">
+                    <label for="name">Email</label>
+                  </div>
                 </div>
                 <div class="mb-5">
-                  <input
-                    type="email"
-                    class="custom-input emailInput"
-                    placeholder="Email"
-                  />
-                </div>
-                <div class="mb-5">
-                  <input
-                    type="tel"
-                    class="custom-input numberInput"
+                  <div class="form-group">
+                    <input type="tel" id="number"
                     oninput="validateNumber(this)"
-                    placeholder="Phone"
-                  />
+                    class="numberInput" placeholder="Name">
+                    <label for="name">Number</label>
+                  </div>
                 </div>
                 <button
                   type="submit"
                   class="btn btn-primary px-5 py-2 rounded-0"
                   style="background-color: var(--gold); border: none"
                 >
-                  Schedule Site Visit
+            Submit
                 </button>
               </form>
             </div>

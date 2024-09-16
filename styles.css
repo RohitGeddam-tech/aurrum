@@ -356,7 +356,7 @@ section {
 .artist-imp {
   position: absolute;
   top: 10%;
-  left: 18%;
+  left: 64px;
   z-index: 12;
   font-size: 10px;
   color: var(--white);
@@ -375,7 +375,7 @@ section {
     top: 10%;
     left: 14%;
     z-index: 12;
-    font-size: 10px;
+    font-size: 8px;
     color: var(--white);
     writing-mode: vertical-lr;
     transform: rotate(180deg);
@@ -485,17 +485,7 @@ section {
   backdrop-filter: blur(0px);
   z-index: 1;
 }
-.amenities-img-card.active {
-  flex: 3;
-}
-.amenities-img-card.active .expanding-card-head {
-  width: 10%;
-}
-.amenities-img-card.active p {
-  z-index: 4;
-  opacity: 1;
-  color: white !important;
-}
+
 
 .overlay-content {
   width: 100%;
@@ -531,16 +521,28 @@ section {
 }
 .amenities-img-card p {
   position: absolute;
-
+  opacity: 0;
   bottom: 4%;
   margin-left: 12%;
   margin-right: 4%;
-  opacity: 0;
   text-align: start;
-  transition: opacity 1s ease-in; /* Correct spelling of 'opacity' */
+  transition: opacity 1s ease-in; 
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(20px); 
+  transition: transform 850s ease-in, opacity 0.1s ease-in;
 }
-
+.amenities-img-card.active {
+  flex: 3;
+}
+.amenities-img-card.active .expanding-card-head {
+  width: 10%;
+}
+.amenities-img-card.active p.active  {
+  opacity: 1;
+  z-index: 4;
+  color: white !important;
+  transform: translateY(0);
+}
 .text-gold {
   color: var(--gold);
 }
@@ -666,13 +668,12 @@ p {
   left: 7px;
 }
 
-/* Style the image inside accordion body */
 .accordion-body .heading img {
   margin: 10px 0;
   max-width: 3px;
 }
 
-/* Keep paragraph at the bottom */
+
 .accordion-body p {
   position: absolute;
   bottom: 10px;
@@ -1132,4 +1133,94 @@ p {
     height: 14px;
     width: 14px;
   }
+}
+
+
+.banner-form .form-group input {
+  width: 100%;
+  padding: 10px 0 10px 14px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #6b6b6b;
+  border-bottom: 1px solid grey;
+  transition: border-color 0.3s ease;
+}
+
+.banner-form .form-group{
+  top: calc(50% - 0.6rem);
+}
+.banner-form .form-group label{
+  top: calc(50% - 0.6rem);
+  color: var(--white);
+}
+
+.banner-form input:focus + label,
+.banner-form input:not(:placeholder-shown) + label {
+  top: -0.05rem; 
+  left: var(--pad);
+  font-size: 0.8rem;
+  color: var(--white); 
+ 
+  transform: translateY(-0.35rem);
+}
+.banner-form .form-group input:focus {
+  outline: none;
+border-bottom: 1px solid var(--gold);
+}
+
+.form-group {
+  --pad: 0.75rem;
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  font-size: 16px;
+  font-family: 'unicode-optima';
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 0 14px 14px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+  border-bottom: 1px solid grey;
+  transition: border-color 0.3s ease;
+}
+
+
+
+label {
+  position: absolute;
+  left: var(--pad);
+  top: calc(50% - 0.5rem);
+  pointer-events: none;
+  color: grey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: -0.05rem; 
+  left: var(--pad);
+  font-size: 0.8rem;
+  color: var(--gold); 
+ 
+  transform: translateY(-0.05rem);
+}
+.form-group input:focus {
+  outline: none;
+border-bottom: 1px solid var(--gold);
+}
+input:not(:focus) + label{
+  color: var(--font-grey);
+}
+
+
+input::placeholder {
+  opacity: 0;
 }

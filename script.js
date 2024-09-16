@@ -1,21 +1,46 @@
 
 const cards = document.querySelectorAll('.amenities-img-card');
 
+
 function removeActiveClasses() {
   cards.forEach(card => {
     card.classList.remove('active');
+
+
+    const paragraph = card.querySelector('.overlay-content p');
+    if (paragraph) {
+      paragraph.classList.remove('active');
+    }
   });
 }
-
 
 cards.forEach(card => {
   card.addEventListener('mouseenter', () => {
     removeActiveClasses(); 
-    card.classList.add('active'); 
+    card.classList.add('active');
+    const paragraph = card.querySelector('.overlay-content p');
+    setTimeout(()=>{
+ 
+    if (paragraph) {
+      paragraph.classList.add('active');
+    }
+    },700)
+  
   });
 });
 
 cards[0].classList.add('active');
+const initialParagraph = cards[0].querySelector('.overlay-content p');
+if (initialParagraph) {
+
+  setTimeout(() => {
+    initialParagraph.classList.add('active');
+  }, 700);
+}
+
+
+
+
 
 const closeBtn = document.getElementById("close-button");
 const backdrop = document.querySelector(".screen-backdrop");
@@ -79,9 +104,17 @@ document.querySelectorAll('.nav-links-mob').forEach(item => {
     }
   });
 });
-
-
-
+// know more
+const knowMoreBtn = document.querySelector('.know-more');
+knowMoreBtn.addEventListener('click', () => {
+  togglePopup(true);
+ });
+// download btn
+const downloadButton = document.querySelector('.download-btn');
+downloadButton.addEventListener('click', () => {
+  togglePopup(true);
+  openedViaDownloadButton = true; // Set the flag to true when form is opened via the download button
+});
 // validation
 
 function validateName(element) {
@@ -107,6 +140,7 @@ function validateEmail(element) {
 
 }
 
+const pdfPath = '/assets/4S_The Aurrum Brochure.pdf';
 
 function handleSubmit(event) {
   event.preventDefault(); 
@@ -129,9 +163,24 @@ function handleSubmit(event) {
     return;
   }
 
+  setTimeout(() => {    
+    togglePopup(false);
+  if (openedViaDownloadButton) {
+      const link = document.createElement('a');
+      link.href = pdfPath;
+      link.download = '4S_The_Aurrum_Brochure.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+   openedViaDownloadButton = false;
+    }
+  }, 1000); 
+
   console.log("Form Data:", { name, email, phone });
   alert('Form submitted successfully!');
 
+
+  
   event.target.reset();
 }
 
