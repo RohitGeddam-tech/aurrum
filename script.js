@@ -72,9 +72,18 @@ accordionButtons.forEach((button) => {
 
 // navbar
 const menuToggle = document.querySelector("#mobile-menu");
+
 const navLinks = document.querySelector(".nav-links-mob");
 
+navLinks.addEventListener("click", () => {
+  if (window.innerWidth < 768) {
+    closeNavbar();
+  }
+});
+
 menuToggle.addEventListener("click", () => {
+  console.log("clicked");
+  
   navLinks.classList.toggle("show");
 });
 
@@ -84,6 +93,7 @@ function closeNavbar() {
     navbarCollapse.classList.remove("show");
   }
 }
+
 
 document.querySelectorAll(".nav-links-mob").forEach((item) => {
   item.addEventListener("click", function () {
@@ -125,12 +135,9 @@ function validateEmail(element) {
 const pdfPath = "/assets/4S_The Aurrum Brochure.pdf";
 
 function handleSubmit(event) {
-  event.preventDefault();
+  event.preventDefault(); 
   const form = event.target;
-  const name = form.querySelector(".nameInput").value;
-  const email = form.querySelector(".emailInput").value;
-  const phone = form.querySelector(".numberInput").value;
-
+  
   const isNameValid = checkName(form);
   const isNumberValid = checkNumber(form);
   const isEmailValid = checkEmail(form);
@@ -140,48 +147,43 @@ function handleSubmit(event) {
     return;
   }
 
-  if (!name || !email || !phone) {
-    alert("All fields are required!");
-    return;
-  }
-const formData = {name:name, phone:phone, email:email}
- 
-$.ajax({
-  url: "formdata.php",
-  type: "POST",
-  data: formData,
-  success: function(response) {
-      alert(response);
-  },
-  error: function(jqXHR, textStatus, errorThrown) {
-      alert('Error: ' + textStatus + ' - ' + errorThrown);
-  }
-});
+  const formData = {
+    name: form.querySelector(".nameInput").value,
+    phone: form.querySelector(".numberInput").value,
+    email: form.querySelector(".emailInput").value
+  };
 
+  // $.ajax({
+  //   url: "formdata.php",
+  //   type: "POST",
+  //   data: $.param(formData), 
+  //   success: function(response) {
+  //     alert(response);
+  //   },
+  //   error: function(jqXHR, textStatus, errorThrown) {
+  //     alert('Error: ' + textStatus + ' - ' + errorThrown);
+  //   }
+  // });
 
- 
   event.target.reset();
 }
 
+
 function checkName(form) {
   const nameInput = form.querySelector(".nameInput");
-  const nameLabel = form.querySelector("#span-name");
+  // const nameLabel = form.querySelector("#span-name");
   const nameRegex = /^[a-zA-Z\s]{3,}$/;
 
   if (!nameRegex.test(nameInput.value)) {
     nameInput.classList.add("error");
-    // nameLabel.classList.add("errorText");
-    // nameLabel.textContent = "Invalid name. Minimum 3 characters required.";
-    console.log("error at name");
     return false;
   } else {
     nameInput.classList.remove("error");
-    // nameLabel.classList.remove("errorText");
-    // nameLabel.textContent = "";
   }
 
   return true;
 }
+
 
 function checkNumber(form) {
   const numberInput = form.querySelector(".numberInput");
@@ -205,22 +207,20 @@ function checkNumber(form) {
 
 function checkEmail(form) {
   const emailInput = form.querySelector(".emailInput");
-  const emailLabel = form.querySelector("#span-email");
+  // const emailLabel = form.querySelector("#span-email");
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-  if (emailInput.value === "") {
-    return true; // Allow empty email
+  if (!emailInput.value) {
+    emailInput.classList.add("error");
+    // emailLabel.textContent = "Email is required"; // Error if empty
+    return false;
   } else if (!emailRegex.test(emailInput.value)) {
     emailInput.classList.add("error");
-    // emailLabel.classList.add("errorText");
-    // emailLabel.textContent = "Please enter a valid Gmail address.";
-    console.log("error at mail");
 
     return false;
   } else {
     emailInput.classList.remove("error");
-    // emailLabel.classList.remove("errorText");
-    // emailLabel.textContent = "";
+
   }
 
   return true;
