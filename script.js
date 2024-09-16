@@ -104,18 +104,16 @@ document.querySelectorAll('.nav-links-mob').forEach(item => {
     }
   });
 });
-// know more
 const knowMoreBtn = document.querySelector('.know-more');
 knowMoreBtn.addEventListener('click', () => {
   togglePopup(true);
  });
-// download btn
 const downloadButton = document.querySelector('.download-btn');
 downloadButton.addEventListener('click', () => {
   togglePopup(true);
-  openedViaDownloadButton = true; // Set the flag to true when form is opened via the download button
+  openedViaDownloadButton = true; 
 });
-// validation
+
 
 function validateName(element) {
   let inputValue = element.value;
@@ -177,10 +175,11 @@ function handleSubmit(event) {
   }, 1000); 
 
   console.log("Form Data:", { name, email, phone });
-  alert('Form submitted successfully!');
+  // alert('Form submitted successfully!');
+  setTimeout(() => {    
+   window.location.href = '/thank-you.html';
+  }, 1000); 
 
-
-  
   event.target.reset();
 }
 

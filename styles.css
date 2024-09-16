@@ -1210,7 +1210,7 @@ input:not(:placeholder-shown) + label {
   font-size: 0.8rem;
   color: var(--gold); 
  
-  transform: translateY(-0.05rem);
+  transform: translateY(-0.20rem);
 }
 .form-group input:focus {
   outline: none;
