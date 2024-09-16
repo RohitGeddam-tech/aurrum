@@ -34,15 +34,34 @@
         font-size: 1.5rem;
       }
       .thank-you-container h1:nth-of-type(1) {
-        font-size: 3rem;
+        font-size: 4rem;
+      }
+      @media (max-width:768px) {
+        .thank-you-container h1:nth-of-type(2) {
+        text-transform: capitalize;
+        font-size: 1rem;
+      }
+      .thank-you-container h1:nth-of-type(1) {
+        font-size: 3.5rem;
+      }
+      }
+      .thank-you-container a{
+        cursor: pointer;
+        font-weight: 600;
+        text-decoration: none;
+        color: #c1a06b;
+      }
+      .thank-you-container a:hover{
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
     <div class="container thank-you-container">
       <div>
-        <h1>Thank you</h1>
-        <h1>Our team will soon get in touch with you</h1>
+        <h1>Thank you!</h1>
+        <h1>Our team will get in touch with you.</h1>
+        <a href="/">Return to Home</a>
       </div>
     </div>
 

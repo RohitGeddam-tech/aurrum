@@ -163,6 +163,7 @@ button {
   font-weight: 500 !important;
   box-shadow: 36px 14px 56px -30px rgba(0, 0, 0, 1),
     -5px 2px 37px 0px rgba(0, 0, 0, 0.22) !important;
+    cursor: pointer;
 }
 @media (max-width: 768px) {
   button {
