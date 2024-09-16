@@ -69,34 +69,35 @@
         </svg>
       </div>
       <h2 class="mb-4">GET IN TOUCH</h2>
-      <form class="w-100" onsubmit="handleSubmit(event)">
+      <form class="w-100"  method="POST">
         <div class="mb-4">
           <div class="form-group">
-            <input type="text" id="name"
-            oninput="validateName(this)"
+            <input type="text" id="mf1_Name"
+            name="name"
             class="nameInput" placeholder="Name">
             <label for="name">Name</label>
           </div>
         </div>
         <div class="mb-4">
           <div class="form-group">
-            <input type="email" id="email"
+            <input type="email" id="mf1_Email"
+            name="email"
             class="emailInput" placeholder="Email">
             <label for="name">Email</label>
           </div>
         </div>
         <div class="mb-5">
           <div class="form-group">
-            <input type="tel" id="number"
-            oninput="validateNumber(this)"
-            class="numberInput" placeholder="Name">
+            <input type="tel" id="mf1_Mobile"
+            name="phone"
+            class="numberInput" placeholder="Phone" minlength="10" maxlength="10" required>
             <label for="name">Number</label>
           </div>
         </div>
-        <button
+        <button id="mf1_submit"
           type="submit"
           class="btn btn-primary px-5 py-2 rounded-0"
-          style="background-color: var(--gold); border: none"
+          style="background-color: var(--gold); border: none"  onclick='myEnquirefunction("m","f1");return(false);'
         >
     Submit
         </button>
@@ -237,12 +238,13 @@
               <h2 class="text-white me-4 mb-0" s>Enquire Now</h2>
               <form
                 class="banner-form d-none d-lg-flex justify-content-center align-items-center gap-3 py-4"
-                onsubmit="handleSubmit(event)"
+                 method="POST"
               >
               
                 <div class="form-group">
-                  <input type="text" id="name"
-                  oninput="validateName(this)"
+                  <input type="text" id="mf2_Name"
+                  name="name"
+                  
                   class="nameInput" placeholder="Name">
                   <label for="name">Name</label>
                 </div>
@@ -250,7 +252,8 @@
            
               
                 <div class="form-group">
-                  <input type="email" id="email"
+                  <input type="email" id="mf2_Email"
+                  name="email"
                   class="emailInput" placeholder="Email">
                   <label for="name">Email</label>
                 </div>
@@ -258,18 +261,21 @@
           
               
                 <div class="form-group">
-                  <input type="tel" id="number"
-                  oninput="validateNumber(this)"
-                  class="numberInput" placeholder="Name">
+                  <input type="tel" id="mf2_Mobile"
+                  name="phone"
+                  class="numberInput" placeholder="Phone" minlength="10" maxlength="10" required>
                   <label for="name">Number</label>
                 </div>
                 <button
+                type="submit"
                   class="btn rounded-0"
                   style="
                     background-color: var(--gold);
                     padding: 10px 46px;
                     border: none;
                   "
+
+id="mf2_submit" onclick='myEnquirefunction("m","f2");return(false);'
                 >
                   Submit
                 </button>
@@ -1389,34 +1395,37 @@
             <div class="empty-area d-none" style="width: 20%"></div>
             <div class="get-in-touch-form">
               <h2 class="mb-4">GET IN TOUCH</h2>
-              <form class="w-100" onsubmit="handleSubmit(event)">
+              <form  method="POST" class="w-100">
                 <div class="mb-4">
                   <div class="form-group">
-                    <input type="text" id="name"
-                    oninput="validateName(this)"
+                    <input type="text" id="mf3_Name"
+                    name="name"
+                    
                     class="nameInput" placeholder="Name">
                     <label for="name">Name</label>
                   </div>
                 </div>
                 <div class="mb-4">
                   <div class="form-group">
-                    <input type="email" id="email"
-                    class="emailInput" placeholder="Email">
+                    <input type="email" id="mf3_Email"
+                    name="email"
+                    class="emailInput" placeholder="Email" >
                     <label for="name">Email</label>
                   </div>
                 </div>
                 <div class="mb-5">
                   <div class="form-group">
-                    <input type="tel" id="number"
-                    oninput="validateNumber(this)"
-                    class="numberInput" placeholder="Name">
+                    <input type="tel" id="mf3_Mobile"
+                    name="phone"
+                    class="numberInput" placeholder="Phone" minlength="10" maxlength="10" required>
                     <label for="name">Number</label>
                   </div>
                 </div>
                 <button
                   type="submit"
                   class="btn btn-primary px-5 py-2 rounded-0"
-                  style="background-color: var(--gold); border: none"
+                  style="background-color: var(--gold); border: none"  id="mf3_submit"
+ onclick='myEnquirefunction("m","f3");return(false);'
                 >
             Submit
                 </button>
@@ -1473,6 +1482,12 @@
         </div>
       </footer>
     </main>
+
+
+    <script
+      type="text/javascript"
+      src="frmscript.js"
+    ></script>
 
     <script>
       // hero banner
