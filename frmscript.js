@@ -1,3 +1,9 @@
+const downloadButton = document.querySelector(".download-btn");
+let openedViaDownloadButton = false;
+downloadButton.addEventListener("click", () => {
+  openedViaDownloadButton = true;
+});
+
 var getUrlParameter = function getUrlParameter(sParam) {
   var sPageURL = decodeURIComponent(window.location.search.substring(1)),
       sURLVariables = sPageURL.split("&"),
@@ -44,6 +50,27 @@ function myEnquirefunction(dev, form) {
                 if(resultData == 'success')
                 {
                   //alert(resultData);
+
+                  setTimeout(() => {
+                    togglePopup(false);
+              
+                    if (openedViaDownloadButton) {
+                      const link = document.createElement("a");
+                      link.href = pdfPath;
+                      link.download = "4S_The_Aurrum_Brochure.pdf";
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                      openedViaDownloadButton = false;
+                    }
+                  }, 1000);
+                
+                
+                  setTimeout(() => {
+                    window.location.href = "/thank-you.html";
+                  }, 1000);
+
+
                   location.href= "thank-you.html";
                   $('#' + dev + form + '_submit').prop('disabled', false);
                   $('#' + dev + form + '_submit').text('Submit');
