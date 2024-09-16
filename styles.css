@@ -144,6 +144,16 @@ h3 {
   font-family: "tiemposHeadline-light";
   color: var(--font-grey);
 }
+
+.mHide {
+  display: block !important;
+}
+
+.dHide {
+  display: none !important;
+}
+
+
 @media (max-width: 768px) {
   h2 {
     font-size: 2.8rem;
@@ -151,6 +161,15 @@ h3 {
   h3 {
     font-size: 1.2rem;
   }
+
+  .mHide {
+    display: none !important;
+  }
+  
+  .dHide {
+    display: block !important;
+  }
+
 }
 p {
   font-family: optima;
@@ -214,6 +233,7 @@ section {
   position: absolute;
   right: 14px;
   top: 14px;
+  cursor:pointer;
 }
 .pop-up-form h2 {
   font-size: 3rem;
@@ -259,6 +279,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 /* button{
@@ -385,7 +406,7 @@ section {
 }
 /* location */
 .location h2 {
-  font-family: unicode-optima;
+  font-family: "tiemposHeadline-light";
 }
 .location-points-wrapper {
   margin: 0 200px;
@@ -424,7 +445,9 @@ section {
   }
 
   .location-navigation {
-    right: 36px;
+    right: unset;
+        Left: 50%;
+        transform: translate(-50%, -100%);
   }
   .loc-point p {
     width: 80%;
@@ -698,7 +721,7 @@ p {
 }
 /* gallery */
 .gallery h2 {
-  font-family: unicode-optima;
+  font-family: "tiemposHeadline-light";
   font-weight: 400;
 }
 
@@ -790,7 +813,7 @@ p {
 
 /* floor plan */
 .floor h2 {
-  font-family: unicode-optima;
+  font-family: "tiemposHeadline-light";
 }
 /* .floor-swiper .slick-track{
   overflow: visible !important;
@@ -839,8 +862,14 @@ p {
 
 /* get in touch */
 .get-in-touch h2 {
-  font-family: unicode-optima;
+  font-family: "tiemposHeadline-light";
 }
+.map-location iframe
+{
+  width:100%;
+}
+
+
 .custom-input {
   border: none;
   border-bottom: 1px solid grey;
