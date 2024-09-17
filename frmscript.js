@@ -1,11 +1,4 @@
-// const downloadButton = document.querySelector(".download-btn");
-
-// let openedViaDownloadButton = false;
-// downloadButton.addEventListener("click", () => {
-//     console.log("clicked");
-    
-//   openedViaDownloadButton = true;
-// });
+let openedViaDownloadButton = false;
 
 var getUrlParameter = function getUrlParameter(sParam) {
   var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -56,7 +49,7 @@ function myEnquirefunction(dev, form) {
 
                   setTimeout(() => {
                     togglePopup(false);
-              
+          
                     if (openedViaDownloadButton) {
                       const link = document.createElement("a");
                       link.href = pdfPath;
@@ -210,12 +203,18 @@ const closeBtn = document.getElementById("close-button");
 const backdrop = document.querySelector(".screen-backdrop");
 const enquire = document.querySelector(".enquire-now");
 const form = document.querySelector(".pop-up-form");
-
+const popupFormBtn = document.querySelector(".pop-up-form form button");
 function togglePopup(show) {
   if (show) {
+    if(openedViaDownloadButton){
+     popupFormBtn.innerText = "Submit & Download"
+    }else{
+        popupFormBtn.innerText = "Submit"
+    }
     backdrop.style.display = "block";
     form.style.display = "flex";
   } else {
+    openedViaDownloadButton = false;
     backdrop.style.display = "none";
     form.style.display = "none";
   }
@@ -282,7 +281,9 @@ knowMoreBtn.addEventListener("click", () => {
 });
 const downloadButton = document.querySelector(".download-btn");
 downloadButton.addEventListener("click", () => {
+openedViaDownloadButton = true;
   togglePopup(true);
+  
 });
 
 function validateName(element) {
@@ -327,17 +328,7 @@ function handleSubmit(event) {
     email: form.querySelector(".emailInput").value
   };
 
-  // $.ajax({
-  //   url: "formdata.php",
-  //   type: "POST",
-  //   data: $.param(formData), 
-  //   success: function(response) {
-  //     alert(response);
-  //   },
-  //   error: function(jqXHR, textStatus, errorThrown) {
-  //     alert('Error: ' + textStatus + ' - ' + errorThrown);
-  //   }
-  // });
+
 
   event.target.reset();
 }
