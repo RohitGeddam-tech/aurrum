@@ -362,10 +362,10 @@ section {
 }
 @media (max-width: 768px) {
   .banner{
-    height: 80vh;
+    height: 88vh;
   }
   .banner-swiper .swiper-slide img{
-    height: 80vh;
+    height: 88vh;
     width: 100%;
   }
   .banner-text h1:nth-of-type(1) {
