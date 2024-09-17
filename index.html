@@ -109,14 +109,23 @@
       <div class="container">
         <div class="logo">
           <a href="#">
-            <img src="assets/assets/the aurrium logo.png" alt="The Aurrium Logo" />
+            <img 
+            src="assets/assets/the aurrium logo.png" 
+            alt="The Aurrium Logo"
+            srcset="
+              assets/mobile assests/the aurrum logo.png 768w,
+              assets/assets/the aurrium logo.png 1200w
+            "
+            sizes="(max-width: 768px) 100vw, 1200px"
+          />
+          
           </a>
         </div>
     
         <div class="menu-wrapper">
-          <a href="tel:8860828860">
+          <!-- <a href="tel:8860828860">
             <img src="assets/assets/call button.png" alt="Call Button" /> 8860828860
-          </a>
+          </a> -->
           <div class="menu-toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
