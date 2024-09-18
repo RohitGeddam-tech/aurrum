@@ -136,7 +136,7 @@
         <div class="menu-li-wrapper">
           <div class="phone-link">
             <a href="tel:8860828860">
-              <img src="assets/assets/call button.png" alt="Call Button" /> 8860828860
+              <img src="assets/assets/call button.png" alt="Call Button" /> 8860-82-8860
             </a>
           </div>
           <ul class="nav-links">
@@ -144,9 +144,9 @@
             <li><a href="#amenities">Amenities</a></li>
             <li><a href="#location">Location</a></li>
             <!-- <li><a href="#specification">Specification</a></li> -->
-            <li><a href="#floor">Floor Plan</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <!-- <li><a href="#price">Price</a></li> -->
+            <li><a href="#floor">Floor Plan</a></li>
+       <!-- <li><a href="#price">Price</a></li> -->
             <li><a onclick="  togglePopup(true);">Get In Touch</a></li>
           </ul>
         </div>
@@ -155,9 +155,9 @@
           <li><a href="#overview">Overview</a></li>
           <li><a href="#amenities">Amenities</a></li>
           <li><a href="#location">Location</a></li>
-          <li><a href="#floor">Floor Plan</a></li>
           <li><a href="#gallery">Gallery</a></li>
-          <!-- <li><a href="#price">Price</a></li> -->
+          <li><a href="#floor">Floor Plan</a></li>
+       <!-- <li><a href="#price">Price</a></li> -->
           <li><a onclick="  togglePopup(true);">Get In Touch</a></li>
         </ul>
       </div>
@@ -170,8 +170,18 @@
       <section id="banner" class="banner" >
         <div class="container-fluid p-0">
           <div class="banner-section position-relative text-center text-white">
-            <div class="banner-swiper">
-              <div class="swiper-slide">
+            <div class="banner-swiper" >
+              <div class="video-overlay"></div>
+              <iframe
+               id="videoFrame"
+              src="https://www.youtube.com/embed/zsuVMWkPLWY?&controls=0&mute=1&autoplay=1&loop=1&playlist=zsuVMWkPLWY"
+              title="Discover The Aurrum: Uber Luxury Residences with 270° Aravalis Views in Gurugram."
+              frameborder="0"
+
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe> 
+              <!-- <div class="swiper-slide">
                 <img
                   src="assets/assets/main banner/banner.jpg"
                   class="img-fluid w-100 mHide"
@@ -186,7 +196,7 @@
                 />
 
 
-                <!-- <div
+                <div
                   class="banner-text position-absolute top-50 start-50 translate-middle"
                 >
                   <h1 class="" data-aos="fade-up" style="color: var(--gold)">
@@ -200,10 +210,10 @@
                   >
                     Extraordinary
                   </h1>
-                </div> -->
-              </div>
+                </div>
+              </div> -->
 
-              <div class="swiper-slide">
+              <!-- <div class="swiper-slide">
                 <img
                   src="assets/assets/location/bg colour.png"
                   class="img-fluid w-100"
@@ -225,12 +235,12 @@
                     Marvel
                   </h1>
                 </div>
-              </div>
+              </div> -->
               <!-- Swiper Navigation -->
 
               <!-- navigation ends -->
             </div>
-            <div class="banner-navigation">
+            <!-- <div class="banner-navigation">
               <div class="banner-button-next">
                 <img
                   src="assets/assets/main banner/arrow left.png"
@@ -245,7 +255,7 @@
                   style="cursor: pointer"
                 />
               </div>
-            </div>
+            </div> -->
             <!-- Form Section -->
             <div
               class="position-absolute d-none d-lg-flex justify-content-center align-items-center bottom-0 start-50 translate-middle-x w-100"
@@ -346,7 +356,7 @@ id="mf2_submit" onclick='myEnquirefunction("m","f2");return(false);'
               >
                 <p class="artist-imp">ARTISTIC IMPRESSION</p>
                 <img
-                  src="assets/mobile assests/overview/image.png"
+                  src="assets/mobile assests/overview/overview-mob.png"
                   alt="overview-img"
                   class="img-fluid"
                   style="
@@ -445,7 +455,7 @@ id="mf2_submit" onclick='myEnquirefunction("m","f2");return(false);'
             >
               <p class="artist-imp">ARTISTIC IMPRESSION</p>
               <img
-                src="assets/assets/overview/overview image.png"
+                src="assets/assets/overview/overview-desk.png"
                 alt="overview-img"
                 class="img-fluid"
                 style="
@@ -879,7 +889,7 @@ id="mf2_submit" onclick='myEnquirefunction("m","f2");return(false);'
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseSix"
                 >
-                  Kids play are
+                  Kids play area
                   <img
                     src="assets/mobile assests/amenities/plus icon.png"
                     alt=""
@@ -1501,11 +1511,11 @@ id="mf2_submit" onclick='myEnquirefunction("m","f2");return(false);'
     ></script>
   
     <script>
-      $(".banner-swiper").slick({
-        slidesToShow: 1,
-        prevArrow: $(".banner-button-next"), // Custom previous button
-        nextArrow: $(".banner-button-prev"), // Custom next button
-      });
+      // $(".banner-swiper").slick({
+      //   slidesToShow: 1,
+      //   prevArrow: $(".banner-button-next"), // Custom previous button
+      //   nextArrow: $(".banner-button-prev"), // Custom next button
+      // });
 
       // gallery
       $(".gallery-swiper").slick({

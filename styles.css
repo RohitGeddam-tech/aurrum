@@ -177,7 +177,7 @@ p {
 }
 
 button {
-  font-family: tiemposHeadline-regular !important;
+  font-family: unicode-optima !important;
   font-size: 1.3rem !important; /* 20pt */
   font-weight: 500 !important;
   box-shadow: 36px 14px 56px -30px rgba(0, 0, 0, 1),
@@ -272,7 +272,7 @@ section {
   width: 35px;
   writing-mode: vertical-rl;
   text-align: center;
-  color: #000;
+  color: #fff;
   text-decoration: none;
   transform: rotate(180deg);
   transform-origin: center; 
@@ -280,6 +280,7 @@ section {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-family: unicode-optima;
 }
 
 /* button{
@@ -329,21 +330,39 @@ section {
 /* banner */
 
 .banner{
-  height: 100vh;
+  /* height: 100vh; */
+  position: relative;
 }
-.banner-swiper .swiper-slide img{
-  height: 100vh;
+
+
+.banner-swiper {
+  position: relative;
   width: 100%;
+  overflow: hidden;
+  height: 100vh;
 }
-.banner-navigation {
+
+
+#videoFrame {
+  /* scale: 1.08; */
   position: absolute;
-  background-attachment: plum;
-  z-index: 10;
-  bottom: 15%;
-  right: 5%;
-  display: flex;
-  justify-content: center;
-  gap: 24px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border: none;
+  aspect-ratio: 16 / 9;
+}
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1; 
+  pointer-events: none; 
 }
 .banner-text h1:nth-of-type(1) {
   font-size: 3.13rem;
@@ -360,20 +379,33 @@ section {
 .banner form input {
   color: var(--white) !important;
 }
+.banner form button{
+  color: var(--white);
+}
 @media (max-width: 768px) {
   .banner{
     height: 88vh;
   }
-  .banner-swiper .swiper-slide img{
-    height: 88vh;
+  .banner-swiper {
+    position: relative;
     width: 100%;
+    overflow: hidden;
+    height: 100vh;
   }
-  .banner-text h1:nth-of-type(1) {
-    font-size: 1.5rem;
+  
+  
+  #videoFrame {
+    /* scale: 1.08; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border: none;
+    aspect-ratio: 9 / 16;
   }
-  .banner-text h1:nth-of-type(2) {
-    font-size: 2.5rem;
-  }
+ 
   .banner form {
     display: none;
   }
@@ -1034,6 +1066,7 @@ p {
 
 .nav-links li {
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .navbar a {
@@ -1049,6 +1082,7 @@ p {
 }
 
 .phone-link a {
+  cursor: pointer;
   display: flex;
   align-items: center;
 }
@@ -1076,6 +1110,7 @@ p {
   transition: all 0.3s ease;
 }
 .nav-links-mob {
+  cursor: pointer;
   display: none;
 }
 
@@ -1117,6 +1152,7 @@ p {
   }
 
   .nav-links-mob {
+    cursor: pointer;
     position: fixed;
     right: -100%;
     top: 55px;

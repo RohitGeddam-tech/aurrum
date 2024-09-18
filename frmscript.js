@@ -165,6 +165,22 @@ function callEnquireValidation(dev, form) {
 
 
 // js file
+function resizeIframe() {
+  const bannerSwiper = document.querySelector('.banner-swiper');
+  const iframe = document.getElementById('videoFrame');
+  
+  const width = bannerSwiper.offsetWidth;
+  const height = bannerSwiper.offsetHeight;
+  console.log(height, width);
+  
+  iframe.style.width = `${width}px`;
+  iframe.style.height = `${height}px`;
+}
+
+window.addEventListener('resize', resizeIframe);
+
+resizeIframe();
+
 const cards = document.querySelectorAll(".amenities-img-card");
 
 function removeActiveClasses() {
