@@ -165,28 +165,31 @@ function callEnquireValidation(dev, form) {
 
 
 // js file
-let tag = document.createElement('script');
+// let tag = document.createElement('script');
 
-tag.src = "https://www.youtube.com/iframe_api";
-let firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// tag.src = "https://www.youtube.com/iframe_api";
+// let firstScriptTag = document.getElementsByTagName('script')[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-function onYouTubeIframeAPIReady() {
-  let player = new YT.Player('player', {
+// function onYouTubeIframeAPIReady() {
+//   let player = new YT.Player('player', {
 
-    videoId: 'OvY59Q_MRYI', 
-   
-    events: {
-      'onReady': onPlayerReady
-    }
-  });
-}
+//     videoId: 'OvY59Q_MRYI', 
 
-function onPlayerReady(event) {
-  event.target.setPlaybackQuality('hd720'); 
-  event.target.playVideo(); 
-  event.target.setVolume(30);
-}
+//     playerVars: {
+//       'playsinline': 1
+//     },
+//     events: {
+//       'onReady': onPlayerReady
+//     }
+//   });
+// }
+
+// function onPlayerReady(event) {
+//   event.target.setPlaybackQuality('hd720'); 
+//   event.target.playVideo(); 
+//   event.target.setVolume(30);
+// }
 
 // function resizeIframe() {
 //   const bannerSwiper = document.querySelector('.banner-swiper');
