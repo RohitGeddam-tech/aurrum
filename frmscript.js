@@ -172,16 +172,10 @@ let firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function onYouTubeIframeAPIReady() {
-  var player = new YT.Player('player', {
+  let player = new YT.Player('player', {
 
     videoId: 'OvY59Q_MRYI', 
-    playerVars: {
-      'autoplay': 1,
-      'controls': 0,
-      'loop': 1,
-      'mute': 1,
-      'playlist': 'OvY59Q_MRYI' 
-    },
+   
     events: {
       'onReady': onPlayerReady
     }
@@ -194,19 +188,19 @@ function onPlayerReady(event) {
   event.target.setVolume(30);
 }
 
-function resizeIframe() {
-  const bannerSwiper = document.querySelector('.banner-swiper');
-  const iframe = document.getElementById('videoFrame');
+// function resizeIframe() {
+//   const bannerSwiper = document.querySelector('.banner-swiper');
+//   const iframe = document.getElementById('videoFrame');
   
-  const width = bannerSwiper.offsetWidth;
-  const height = bannerSwiper.offsetHeight;
-  iframe.width = iframe.contentWindow.width;
-  iframe.height = iframe.contentWindow.height;
-}
+//   const width = bannerSwiper.offsetWidth;
+//   const height = bannerSwiper.offsetHeight;
+//   iframe.width = iframe.contentWindow.width;
+//   iframe.height = iframe.contentWindow.height;
+// }
 
-window.addEventListener('resize', resizeIframe);
+// window.addEventListener('resize', resizeIframe);
 
-resizeIframe();
+// resizeIframe();
 
 const cards = document.querySelectorAll(".amenities-img-card");
 
@@ -298,9 +292,7 @@ navLinks.addEventListener("click", () => {
 });
 
 menuToggle.addEventListener("click", () => {
-  console.log("clicked");
-  
-  navLinks.classList.toggle("show");
+navLinks.classList.toggle("show");
 });
 
 function closeNavbar() {
