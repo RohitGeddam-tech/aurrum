@@ -191,6 +191,7 @@ function onYouTubeIframeAPIReady() {
 function onPlayerReady(event) {
   event.target.setPlaybackQuality('hd720'); 
   event.target.playVideo(); 
+  event.target.setVolume(30);
 }
 
 function resizeIframe() {
