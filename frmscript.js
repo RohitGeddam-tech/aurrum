@@ -165,16 +165,42 @@ function callEnquireValidation(dev, form) {
 
 
 // js file
+let tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+let firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubeIframeAPIReady() {
+  var player = new YT.Player('player', {
+
+    videoId: 'OvY59Q_MRYI', 
+    playerVars: {
+      'autoplay': 1,
+      'controls': 0,
+      'loop': 1,
+      'mute': 1,
+      'playlist': 'OvY59Q_MRYI' 
+    },
+    events: {
+      'onReady': onPlayerReady
+    }
+  });
+}
+
+function onPlayerReady(event) {
+  event.target.setPlaybackQuality('hd720'); 
+  event.target.playVideo(); 
+}
+
 function resizeIframe() {
   const bannerSwiper = document.querySelector('.banner-swiper');
   const iframe = document.getElementById('videoFrame');
   
   const width = bannerSwiper.offsetWidth;
   const height = bannerSwiper.offsetHeight;
-  console.log(height, width);
-  
-  iframe.style.width = `${width}px`;
-  iframe.style.height = `${height}px`;
+  iframe.width = iframe.contentWindow.width;
+  iframe.height = iframe.contentWindow.height;
 }
 
 window.addEventListener('resize', resizeIframe);
